@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 模板字符串
+    var person = {
+      name: "韩梅梅",
+      age: 18,
+      gender: 0,
+      birthday: new Date().getTime(),
+      salary: 9999.999,
+      bonus: 1000.001
+    }
+    var week = ['日', '一', '二', '三', '四', '五', '六'];
+    console.log(`
+                姓名：${person.name}
+                年龄：${person.age}
+                性别：${person.gender ? "男" : "女"}
+                生日：${new Date(person.birthday).toLocaleString()}
+                工资：${(person.salary + person.bonus).toFixed(2)}
+                今天星期${week[new Date().getDay()]}
+                `)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = ["然", "东", "亮"];
+    var arr1 = [1, 2, 3];
+    arr.forEach(function (element) {
+      console.log(`${element}!!!!`)
+    })
+    // 使用原生JS函数仿写forEach
+    Array.prototype._forEach = function (fun) {
+      for (let i = 0; i <= this.length - 1; i++) {
+        if (this[i] !== undefined) {
+          fun(this[i], i, this)
+        }
+      }
+    }
+    arr._forEach(function (element) {
+      console.log(`${element}!!!!`)
+    })
+
+    var newarr = arr1.map(function (element, i, arr) {
+      return element * 2;
+    })
+    console.log(arr1)
+    console.log(newarr)
+    // 使用原生JS仿写map
+    Array.prototype._map = function (fun) {
+      var arr = [];
+      for (let i = 0; i <= this.length - 1; i++) {
+        if (this[i] !== undefined) {
+          arr[i] = fun(this[i], i, this)
+        }
+      }
+      return arr;
+    }
+    console.log(arr1._map(function (element) {
+      return element * 2;
+    }))
+  </script>
+</body>
+
+</html>

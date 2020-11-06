@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var getSum = function (salary, bonus1, bonus2) {
+      console.log(`${this.ename}的总工资为${salary + bonus1 + bonus2}元`);
+      return salary + bonus1 + bonus2;
+    }
+    var hmm = {
+      ename: "韩梅梅",
+      eage: 18
+    }
+    // 使用bind()永久更改this指向,可以再bind(对象,实参)并添加固定实参
+    var gettotal = getSum.bind(hmm, 10000);
+    gettotal(1000, 100);
+    gettotal(2000, 200)
+  </script>
+</body>
+
+</html>

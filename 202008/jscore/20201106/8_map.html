@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [1, 3, 5, 7, 9];
+    var newarr = arr.map(function (element, i, arr) {
+      console.log(`element:${element}===${element * 2}`)
+      return element * 2;
+    })
+    console.log(arr)
+    console.log(newarr)
+  </script>
+</body>
+
+</html>

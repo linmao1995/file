@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr1 = [1, 3, 5, 7, 9];
+    var arr2 = [2, 4, 6, 8, 10];
+
+    // 判断数组元素是否含有奇数
+    var checkodd = function (array) {
+      return array.some(function (element, i, arr) {
+        console.log(`[${array}],当前元素:${element},当前下标:${i},当前数组对象:${arr}],${element % 2 == 1}`)
+        return element % 2 == 1;
+      })
+    }
+    console.log(`数组arr1是否含有奇数:${checkodd(arr1) ? "是" : "否"}`)
+    console.log(`数组arr2是否含有奇数:${checkodd(arr2) ? "是" : "否"}`)
+  </script>
+</body>
+
+</html>

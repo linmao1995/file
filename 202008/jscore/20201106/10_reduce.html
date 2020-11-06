@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = [3, 2, 1, 4, 5, 6];
+
+    //获取一个数组中的最大值
+    var getMax = function (arr) {
+      return arr.reduce(function (total, currentValue, currentIndex, currentArray) {
+        console.log(`total=${total},currentValue=${currentValue},currentIndex=${currentIndex},currentArray=[${currentArray}]`)
+        return total > currentValue ? total : currentValue;
+      })
+    }
+
+    //数组元素累乘
+    var getTotal = function (arr) {
+      return arr.reduce(function (total, curValue, curIndex, curArray) {
+        console.log(`total=${total},curValue=${curValue},curIndex=${curIndex},curArray=${curArray}`)
+        return total * curValue;
+      })
+    }
+
+    console.log(arr)
+    console.log(getMax(arr))
+    console.log(getTotal(arr))
+  </script>
+</body>
+
+</html>
