@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .top-height {
+      height: 377px;
+      background-color: #e8e8e8;
+    }
+
+    .bottom-height {
+      height: 233px;
+      margin-top: 10px;
+      background-color: #e8e8e8;
+    }
+
+    #content>div:nth-child(1) {
+      width: 609px;
+      position: relative;
+    }
+
+    #content>div:nth-child(2) {
+      width: 381px;
+      position: relative;
+    }
+
+    #content>div:nth-child(3) {
+      width: 377px;
+      position: relative;
+    }
+
+    #content>div:nth-child(4),
+    #content>div:nth-child(5),
+    #content>div:nth-child(6) {
+      position: relative;
+      width: 198px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #content>div:nth-child(1)>div:first-child {
+      width: 245px;
+      height: 243px;
+      position: absolute;
+      left: 65px;
+      top: 55px;
+    }
+
+    #content>div:nth-child(1)>div>img {
+      width: 390px;
+      height: 300px;
+      position: absolute;
+      right: 30px;
+      top: 56px;
+    }
+
+    #content div>div>p.title {
+      font: 32px "simhei", Arial, Helvetica, sans-serif;
+      color: #333333;
+    }
+
+    #content div>div>p.desc {
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      color: #666666;
+      margin-bottom: 24px;
+    }
+
+    #content div>div>p.price {
+      font: 24px "simhei", Arial, Helvetica, sans-serif;
+      color: #0aa1ed;
+      margin-bottom: 12px;
+    }
+
+    #content div>div a {
+      display: block;
+      width: 130px;
+      height: 40px;
+      text-decoration: none;
+      border-radius: 2px;
+      color: #ffffff;
+      background-color: #0aa1ed;
+      text-align: center;
+      line-height: 40px;
+      outline: 0px;
+    }
+
+    #content>div:nth-child(2)>div {
+      width: 253px;
+      height: 221px;
+      position: absolute;
+      left: 24px;
+      top: 63px;
+    }
+
+    #content>div:nth-child(2)>img {
+      width: 292px;
+      height: 232px;
+      position: absolute;
+      right: 25px;
+      bottom: 20px;
+    }
+
+    #content>div:nth-child(3)>div {
+      width: 149px;
+      height: 143px;
+      position: absolute;
+      top: 21px;
+      left: 33px;
+      padding-top: 1em;
+    }
+
+    #content>div:nth-child(3)>div>p.title {
+      font: 22px "simhei", Arial, Helvetica, sans-serif;
+      color: #333333;
+    }
+
+    #content>div:nth-child(3)>div>p.price {
+      font: 22px "simhei", Arial, Helvetica, sans-serif;
+      color: #0aa1ed;
+      margin-bottom: 12px;
+    }
+
+    #content>div:nth-child(3)>img {
+      position: absolute;
+      top: 40px;
+      right: 17px;
+    }
+
+    #content>div:nth-child(4)>p.title,
+    #content>div:nth-child(5)>p.title,
+    #content>div:nth-child(6)>p.title {
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      color: #333333;
+      align-self: center;
+    }
+
+    #content>div:nth-child(4)>p.price,
+    #content>div:nth-child(5)>p.price,
+    #content>div:nth-child(6)>p.price {
+      font: 24px "simhei", Arial, Helvetica, sans-serif;
+      color: #0aa1ed;
+      margin-top: 5px;
+      align-self: center;
+    }
+
+    #content>div:nth-child(4)>a,
+    #content>div:nth-child(5)>a,
+    #content>div:nth-child(6)>a {
+      display: block;
+      text-decoration: none;
+      border-radius: 2px;
+      align-self: center;
+      font: 14px "simhei", Arial, Helvetica, sans-serif;
+      padding: 6px 23px;
+      color: #ffffff;
+      background-color: #0aa1ed;
+      position: absolute;
+      bottom: 10px;
+      left: 51px;
+    }
+
+    img {
+      transition: 1s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div class="top-height">
+      <div>
+        <p class="title">Apple MacBook Air系列</p>
+        <p class="desc">酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <div>
+        <img src="img1.png" alt="">
+      </div>
+    </div>
+    <div class="top-height">
+      <div>
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="desc">酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+        <p class="price">￥3488.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="img2.png" alt="">
+    </div>
+    <div class="bottom-height">
+      <div>
+        <p class="title">联想E480C 轻薄系列</p>
+        <p class="price">￥5399.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="img3.png" alt="">
+    </div>
+    <div class="bottom-height">
+      <img src="img4.png" alt="">
+      <p class="title">华硕RX310 金属超极本</p>
+      <p class="price">￥4966.00</p>
+      <a href="#">查看详情</a>
+    </div>
+    <div class="bottom-height">
+      <img src="img5.png" alt="">
+      <p class="title">联想小新700 电竞版游戏本</p>
+      <p class="price">￥6299.00</p>
+      <a href="#">查看详情</a>
+    </div>
+    <div class="bottom-height">
+      <img src="img4.png" alt="">
+      <p class="title">戴尔灵越燃7000 轻薄窄边</p>
+      <p class="price">￥5199.00</p>
+      <a href="#">查看详情</a>
+    </div>
+  </div>
+</body>
+
+</html>

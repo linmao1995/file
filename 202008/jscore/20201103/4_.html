@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    (function () {
+      var start = new Date();
+      // alert(`页面加载时间:${start.toLocaleString()}`)
+    })();
+  </script>
+  <script>
+    var msg = "you can you up no can no bb";
+    var str = msg.replace(/\b[a-z]/ig, function (kw) {
+      return kw.toUpperCase();
+    })
+    console.log(str)
+    console.log(window)
+
+  </script>
+  <script>
+      (function () {
+        var end = new Date();
+        // alert(`页面加载完成时间:${end.toLocaleString()}`)
+        function count() {
+          var arr = [];
+          for (var i = 1; i <= 3; i++) {
+            arr.push(function () {
+              return i * i;
+            });
+          }
+          return arr;
+        }
+
+        var results = count();
+        var f1 = results[0];
+        var f2 = results[1];
+        var f3 = results[2];
+        console.log(f1(), f2(), f3())
+      })();
+  </script>
+</body>
+
+</html>

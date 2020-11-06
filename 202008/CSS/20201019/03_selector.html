@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #d1::before {
+      /*这个伪元素要显示的数据 行内元素，设置宽高无效*/
+      content: "蒙奇说:";
+      background-color: #00ff00;
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+
+    #d1::after {
+      content: "汉库克成为了海贼王";
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+
+    #d2 {
+      width: 200px;
+      height: 200px;
+      background-color: #00ffff;
+    }
+
+    #d2 div {
+      width: 100px;
+      height: 100px;
+      margin-top: 0px;
+      background-color: black;
+    }
+
+    #d2::before {
+      content: "";
+      display: table;
+    }
+
+    #dd1,#dd2,#dd3,#dd4{
+      width: 200px;
+      height: 200px;
+      float: left;
+    }
+    #dd1{
+      background-color: red;
+    }
+    #dd2{
+      background-color: orange;
+    }
+    #dd3{
+      background-color: green;
+    }
+    #dd4{
+      width: 900px;
+      height: 50px;
+      background-color: #666666;
+      clear: both;
+    }
+    #con{
+      border: 2px solid #000000;
+    }
+    #con::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>高度坍塌</h3>
+  <div id="con">
+    <div id="dd1"></div>
+    <div id="dd2"></div>
+    <div id="dd3"></div>
+    <div id="dd4"></div>
+  </div>
+  <br><br><br>
+  <div id="d2">
+    <div></div>
+  </div>
+  <br><br><br>
+  <div id="d1">
+    <!-- ::before ::after 在内容区域之前或最后添加了一个假元素,使用content来添加数据，是行内元素 -->
+    我是要成为海贼王的男人
+  </div>
+</body>
+
+</html>

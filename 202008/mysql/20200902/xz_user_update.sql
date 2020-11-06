@@ -1,0 +1,1 @@
+update xz_user set pwd = '123' ,phone = '131', regTime = '00-00-00' where uid = 1

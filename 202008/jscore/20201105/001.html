@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body> 
+  <button onclick="jian()">－</button>
+  <input type="text" id="num" readonly value="1">
+  <button onclick="jia()">＋</button>
+  <script>
+    // － 控制数字 -1
+    var jian = function () {
+      var _v = document.getElementById("num");
+      //获取input输入框的值。
+      var _vv = parseInt(_v.value);
+      if (_vv > 1) {
+        _vv--;
+      }
+      document.getElementById("num").value = _vv;
+    }
+    // ＋ 控制数字 +1
+    var jia = function () {
+      var _v = document.getElementById("num");
+      //获取input输入框的值。
+      var _vv = parseInt(_v.value);
+      _vv++;
+      document.getElementById("num").value = _vv;
+    }
+  </script>
+</body>
+
+</html>

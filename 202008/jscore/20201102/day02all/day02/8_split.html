@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var str="you can you up";
+    //将英文的句子，变成单词的数组，按空格切割
+    var arr=str.split(" ");
+    console.log(arr);
+
+    var str="you      can        you up";
+    //将英文的句子，变成单词的数组，按空格切割
+    //var arr=str.split(/\s+/);
+    var arr=str.split(new RegExp("\\s+"));
+    console.log(arr);
+
+    var arr=[1,2,3,4,5];
+    arr.reverse();
+    console.log(arr);
+
+    //高频鄙视题: 翻转一个字符串: 
+    var str="helloworld";
+    //将str打散为字符数组
+    var arr=str.split("");
+    console.log(arr);
+    //将arr翻转
+    arr.reverse();
+    console.log(arr);
+    //将arr无缝拼接为一个字符串
+    //复习第一阶段数组函数join:用任意自定义连接符，将数组中每个元素值拼接为一个字符串。
+    str=arr.join("");//无缝拼接
+    console.log(str); //"dlrowolleh"
+  </script>
+</body>
+</html>

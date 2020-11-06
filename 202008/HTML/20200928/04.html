@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其他表单元素</title>
+</head>
+
+<body>
+    <iframe src="02_form.html" frameborder="0" width="100%" height="750px" scrolling="no"></iframe>
+    <input type="radio" name="gender" id="nan">
+    <label for="nan">男</label>
+    <input type="radio" name="gender" id="nv">
+    <label for="nv">女</label>
+    <br><br><br><br>
+    <h3>为控件分组</h3>
+    <br><br><br>
+    <fieldset>
+        <legend>基本信息</legend>
+        用户姓名：<input type="text" name="uname" id=""><br>
+        家庭地址：<input type="text" name="address" id=""><br>
+        联系方式：<input type="text" name="phone" id=""><br>
+        身份证号：<input type="text" name="idcard" id=""><br>
+    </fieldset>
+    <fieldset>
+        <legend>真实信息</legend>
+        真实姓名：<input type="text" name="uname" id=""><br>
+        真实地址：<input type="text" name="address" id=""><br>
+        联系方式：<input type="text" name="phone" id=""><br>
+        身份证号：<input type="text" name="idcard" id=""><br>
+    </fieldset>
+    <br><br><br>
+    <fieldset>
+        <legend>用户基本信息</legend>
+        用户名称：<input type="text" name="uname" placeholder="请输入你的用户名称"><br>
+        用户密码：<input type="password" name="upwd" value="123456"><br>
+        用户性别：<input type="radio" name="gender" value="1" checked>男
+        <input type="radio" name="gender" value="0">女
+    </fieldset><br>
+    用户爱好：
+    <input type="checkbox" name="hobby" value="1">吃
+    <input type="checkbox" name="hobby" value="2">喝
+    <input type="checkbox" name="hobby" value="3">玩
+    <input type="checkbox" name="hobby" value="4">乐<br><br>
+    选择头像：<input type="file" name="pic"><br>
+    自我介绍：<textarea name="js" cols="50" rows="10"></textarea><br>
+    工作城市：
+    <select name="city" size="3">
+        <option value="bj">北京</option>
+        <option value="tj">天津</option>
+        <option value="sh">上海</option>
+        <option value="gz">广州</option>
+    </select>
+    <br><br>
+    <input type="submit" value="登录">
+    <input type="reset" value="重填">
+    <input type="button" value="普通按钮">
+</body>
+
+</html>

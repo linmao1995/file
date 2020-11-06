@@ -1,0 +1,87 @@
+.breadcrumb-item+.breadcrumb-item::before {
+  content: ">";
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: none;
+}
+
+.myimgs_ {
+  width: 20%;
+}
+
+.myimgs_:hover {
+  border: 1px solid #dddddd;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+
+.my_img_1 {
+  overflow: hidden;
+}
+
+.my_img_1>img {
+  transition: 1s;
+}
+
+.my_img_1>img:hover {
+  transform: scale(1.1);
+}
+
+.bg_shadow {
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.bg_gray {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.con_kf {
+  margin-top: -15px;
+}
+
+.my_size {
+  margin-top: -24px;
+  margin-left: 50px;
+  font-size: 10px;
+}
+
+.my_size a:hover {
+  color: #0aa1ed;
+  border: 1px solid #0aa1ed;
+  background-color: transparent;
+}
+
+.my_btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #dddddd;
+  outline: 0;
+  padding: 0;
+  line-height: 0.9;
+}
+
+.my_input_1 {
+  width: 10%;
+  height: 1.5rem;
+  border: 0;
+  outline: 0;
+  text-align: center;
+}
+
+.buy_btn {
+  border: 1px solid #dddddd;
+  color: #0aa1ed;
+}
+
+.buy_btn:hover {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.w_width {
+  width: 162px;
+}
+
+.car_btn {
+  height: 54px;
+}

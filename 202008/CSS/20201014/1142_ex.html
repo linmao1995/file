@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #bg-img {
+      /* 宽，高 */
+      width: 1366px;
+      height: 561px;
+      /* 背景 */
+      background-image: url("bg.png");
+    }
+
+    #bg-img>#reg-table {
+      width: 253px;
+      height: 277px;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin-top: 10%;
+      margin-left: 70%;
+    }
+
+    .f-color {
+      color: white;
+      font-size: 20px;
+    }
+
+    .reg {
+      text-decoration: none;
+      color: white;
+      font-size: 10px;
+      text-align: right;
+      margin-left: 20px;
+    }
+
+    #uname {
+      height: 30px;
+      width: 220px;
+      background-image: url("yhm.png");
+      background-repeat: no-repeat;
+      background-position: 90% 50%;
+    }
+
+    #upwd {
+      height: 30px;
+      width: 220px;
+      background-image: url("mm.png");
+      background-repeat: no-repeat;
+      background-position: 90%;
+    }
+
+    .login-btn {
+      width: 220px;
+      height: 30px;
+      box-sizing: border-box;
+    }
+
+    .auto-login {
+      color: white;
+    }
+
+    .forget-pwd {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg-img">
+    <table></table>
+    <div id="reg-table">
+      <table style="width: 253px; height: 100%;" cellspacing="0" cellpacding="0">
+        <tr>
+          <td>
+            <div class="f-color">登录学子商城</div>
+          </td>
+          <td align="right"><a href="#" class="reg">新用户注册</a></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="text" id="uname" placeholder="请输入你的用户名"></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="password" id="upwd" placeholder="请输入你的密码"></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="auto-login"><input type="checkbox">自动登录</div>
+          </td>
+          <td><a href="#" class="forget-pwd">忘记密码?</td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="button" class="login-btn" value="登录"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

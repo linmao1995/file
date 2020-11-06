@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #d1,
+    #d2 {
+      width: 200px;
+      height: 200px;
+    }
+
+    /* position: relative 不脱离文档流 */
+    /* 相对于元素原本位置做偏移 */
+    /* 不会影响其他元素，同时自己也没有位移 */
+    #d1 {
+      background-color: #00ff00;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+
+    #d2 {
+
+      background-color: #0000ff;
+      
+    }
+    #d3{
+      width: 100px;
+      height: 100px;
+      background-color: #0000ff;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="d1">
+    <div id="d3"></div>
+  </div>
+  <div id="d2"></div>
+</body>
+
+</html>

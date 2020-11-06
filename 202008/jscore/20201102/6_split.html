@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str = "you can you   up  no  can   no bb";
+    var arr1 = str.split(/\s+/);
+    for(var key in arr1){
+      var str_arr = arr1[key].split("");
+      str_arr.reverse().join();
+    }
+    console.log(str_arr)
+
+    // 字符串反转
+    var str1 = "helloworld";
+    // 空字符切割
+    var arr = str1.split("");
+    //字符数组反转
+    arr.reverse();
+    //join()将数组转字符串
+    var new_str = arr.join("");
+    console.log(new_str)
+  </script>
+</body>
+
+</html>

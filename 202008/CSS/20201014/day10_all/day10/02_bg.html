@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 500px;height: 500px;
+				border: 2px solid #f00;
+				background-color: #aaf;/*背景颜色*/
+				background-image: url(09.png);/*背景图片*/
+				background-repeat: no-repeat;/*背景图片的平铺*/
+				background-position: center;/*背景图片的定位*/
+				background-size: 10%;/*设置背景图片的大小*/
+			}  
+			#d2{
+				width: 500px;height: 500px;
+				border: 3px solid #f00;
+				background-image: url(img1_wide.jpg);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			#d3{
+				width: 500px;height: 500px;
+				border: 3px solid #f00;
+				background:url(09.png) no-repeat  90% 10% #aaf ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d3"></div>
+		<br>
+		<hr>
+		<br>
+		<div id="d2"></div>
+		<br>
+		<hr>
+		<br>
+		<div id="d1"></div>
+	</body>
+</html>

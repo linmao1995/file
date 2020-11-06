@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>复杂选择器</title>
+  <style>
+    /* 相邻兄弟选择器 */
+    /* p+p {
+      color: red;
+    } */
+    /* 通用兄弟选择器  ~  选择器1后所有符合选择器2的元素*/
+    /* p~p{
+      color: red;
+    } */
+    /* 属性选择器及其变种 */
+    /* [title]{
+      color: red;
+    } */
+    /* [attr1]和[attr2]同时具备的元素 */
+    /* [aaa][title]{color: red;} */
+    /* 具备title属性的h1标签
+    h1[title]{color: red;} */
+    /* 匹配具有attr属性并且值以value开头的元素 */
+    /* [title^="bil"]{color: red;} */
+    /* 匹配以value结尾的元素 */
+    /* [title$="ao"]{color: red;} */
+    /* 匹配title中含有lao的元素 */
+    /* [title*="lao"]{color: red;} */
+    /* 匹配具有attr属性，并且值中包含有value这个独立单词的元素 */
+    /* [title~="bi"]{color: red;} */
+    /* 结构选择器 */
+    /* 匹配这个选择器父元素的第一个儿子，这个儿子还得符合这个选择器 */
+    /* p:first-child{color: red;} */
+
+    /* h1:last-child{background-color: purple;} */
+
+    /* span:nth-child(1){color: #ff0000;} */
+
+    /* 空标签选择器 */
+    div:empty {
+      border: 1px solid red;
+      width: 100px;
+      height: 100px;
+      background-color: #00ffff;
+    }
+
+    /* 唯一子元素选择器 独生子女，只有一个a */
+    a:only-child {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: #00ffff;
+    }
+
+    /* 否定选择器  */
+    a:not(:only-child){
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: #00ffff;
+    }
+    #content {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 800px;
+      height: 800px;
+      background-color: #00ffff;
+    }
+
+    #content>div {
+      width: 80px;
+      height: 80px;
+      background-color: #00ff00;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+  <br><br><br>
+  <div>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+  </div>
+  <div>
+    <a href="#">1</a>
+  </div>
+  <br><br>
+  <span>111</span>
+  <p id="p1">大娃</p>
+  <p class="c1">二娃</p>
+  <span title="bi lao shi ren fa biao" aaa="bbb">三娃</span>
+  <b>四娃</b>
+  <p>五娃</p>
+  <div class="c1">六娃</div>
+  <h1 title="bilaoshirenfabiao">七娃</h1>
+</body>
+
+</html>

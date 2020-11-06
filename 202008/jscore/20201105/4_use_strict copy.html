@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";//ES5 严格模式
+    // 1、禁止给未声明的变量赋值
+    function send() {
+      var gf;
+      gf = "今晚308";
+      qgf = 1001;
+      console.log(qgf)//严格模式下报错，qgf is undefined
+    }
+    // send()
+
+    // 2、静默失败，升级为错误
+    var emp = {
+      eid: 1001,
+      salary: 10000,
+      ename: "张三"
+    }
+    // 修改单个属性 defineProperty
+    Object.defineProperty(emp, "eid", {
+      writable: false,
+    //   enumerable:false,
+    //   // 控制是否可删除，又控制是否可修改前两个属性
+    //   configurable:false,
+    })
+
+    // 修改多个属性时，defineProperties
+
+    // Object.defineProperties(emp,{
+    //   "ename":{
+    //     writable:false,//是都可修改
+    //     enumerable:true,//是否可遍历,半隐藏，可通过 . 获取。
+    //     configurable:false,//控制是否可删除，又控制是否可修改前两个属性
+    //   },
+    //   eid:{
+    //     writable:false,
+    //     enumerable:true,
+    //     configurable:false,
+    //   },
+    //   salary:{
+    //     enumerable:false,
+    //     configurable:false,
+    //   }
+      
+    // })
+
+    emp.eid = 1002;
+
+    // emp.ename = "李四";
+    for(var key in emp){
+      console.log(`${key}:${emp[key]}`);
+    }
+    console.log(emp)
+  </script>
+</body>
+
+</html>

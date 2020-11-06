@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>DOM操作</h3>
+    <input type="text" id="name"><br>
+    <div id="divv"></div>
+    <br><br>
+    <br><br>
+
+    <input onfocus="getspan()" onblur="getinput()" type="text" id="msg">
+    <span id="sp"></span>
+    <br><br>
+    <button onclick="getres()">提交</button>
+    <script>
+        function getres() {
+            var input = document.getElementById("name").value;
+            //双标签之间叫内容区域  <p>内容区域</p>
+            var div = document.getElementById("divv");
+            // div.innerHTML = `<h3>${input}</h3>`;
+            div.innerHTML = "<a><i>"+input+"</i></a>"
+            console.log(input)
+        }
+        function getspan() {
+            document.getElementById("sp").innerHTML = "用户名长度6~10位"
+        }
+        function getinput() {
+            var i = document.getElementById("msg").value;
+            var s = document.getElementById("sp");
+            // 为空 显示×  长度错误，显示× 正确显示√
+            if (!i) {//非空验证
+                s.innerHTML = "×";
+            } else if (i.length < 6 || i.length > 10) {
+                s.innerHTML = "×"
+            } else {
+                s.innerHTML = "√"
+            }
+        }
+    </script>
+</body>
+
+</html>

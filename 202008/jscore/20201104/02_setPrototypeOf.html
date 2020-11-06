@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 同时为多个子对象更改原型对象，
+    // 1、修改构造函数的prototype属性指向新的对象
+    var father = {
+      money: 1000000000,
+      house: function () {
+        return `${this.sname}可以有很多很多的房。。。`
+      }
+    }
+    function Studeng(sname, sage) {
+      this.sname = sname;
+      this.sage = sage;
+    }
+    // 2、讲究时机，一定要在创建第一个子对象之前跟换
+    Studeng.prototype = father;
+
+    var lilei = new Studeng("李雷", 20);
+    var hmm = new Studeng("韩梅梅", 20);
+    console.log(lilei);
+    console.log(lilei.house());
+    console.log(hmm.house())
+  </script>
+</body>
+
+</html>

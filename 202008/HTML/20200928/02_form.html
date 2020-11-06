@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="GET" enctype="application/x-www-form-urlencoded">
+        <!-- <input type="text" name="id" hidden value="1"><br> -->
+        <input type="hidden" name="id" value="1001">
+        <input type="text" name="name" placeholder="请输入用户名"><br>
+        <input type="radio" name="gender" value="1" checked>男
+        <input type="radio" name="gender" value="0">女
+        <br><br><br><br><br><br><br>
+        下拉列表:
+        <select name="city" size="4" multiple>
+            <option value="1">北京</option>
+            <option value="2">天津</option>
+            <option value="3">重庆1</option>
+            <option value="4">重庆2</option>
+            <option value="5">重庆3</option>
+            <option value="6">重庆4</option>
+            <option value="7">重庆5</option>
+            <option value="8">重庆6</option>
+        </select>
+        <br><br><br><br><br><br>
+        <button type="submit">提交</button>
+        <button onmousemove="show1()">点我试试</button>
+    </form>
+    <br><br><br><br>
+    <h3>单选按钮</h3>
+    <form action="" method="get">
+        <input type="radio" name="gender" value="1" checked>男
+        <input type="radio" name="gender" value="0">女
+        <input type="radio" name="gender" value="2">未知
+        <br>
+        <input type="submit" value="提交">
+    </form>
+    <h3>多选按钮</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <input type="checkbox" name="hobby" value="1">看书
+        <input type="checkbox" name="hobby" value="2">玩游戏
+        <input type="checkbox" name="hobby" value="3">打球
+        <input type="checkbox" name="hobby" value="4">游泳
+        <input type="checkbox" name="hobby" value="5">跑步
+        <input type="checkbox" name="hobby" value="6">看电影
+        <!-- multiple 设置可上传多个 -->
+        <input type="file" name="pic" multiple id="">
+        <textarea name="textarea" id="" cols="5" rows="2"></textarea>
+        <br>
+        <button type="submit">提交</button>
+    </form>
+    <script>
+        function show() {
+            alert("试试就试试")
+        }
+    </script>
+</body>
+
+</html>

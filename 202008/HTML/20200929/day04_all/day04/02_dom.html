@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//1.写事件 (onclick="")
+				//2.通过dom命令获取元素对象
+				var n1=document.getElementById("uname");
+				var d1=document.getElementById("msg");
+				console.log(d1);
+				//3.通过元素对象，操作元素属性/值
+				d1.innerHTML="你学废了吗";
+				// n1.value="abc";
+				// var r=n1.value;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<button onclick="show()">提交</button>
+		<div id="msg"></div>
+	</body>
+</html>

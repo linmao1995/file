@@ -1,0 +1,71 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			/* 手写媒体查询，完成text-justify的4个屏幕响应式编写 */
+			@media (min-width: 576px){
+				.text-sm-justify{text-align: justify !important; }
+			}
+			@media (min-width: 768px){
+				.text-md-justify{text-align: justify !important; }
+			}
+			@media (min-width: 992px){
+				.text-lg-justify{text-align: justify !important; }
+			}
+			@media (min-width: 1200px){
+				.text-xl-justify{text-align: justify !important; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h3>列表组</h3>
+			<ul class="list-unstyled list-group">
+				<li class="list-group-item list-group-item-danger">小鸡炖蘑菇</li>
+				<li class="list-group-item list-group-item-warning">猪肉炖粉条</li>
+				<li class="list-group-item list-group-item-success disabled">铁锅炖大鹅</li>
+				<li class="list-group-item list-group-item-info">酸菜汆白肉</li>
+				<li class="list-group-item list-group-item-primary">毛血旺</li>
+				<li class="list-group-item list-group-item-secondary active">水煮肉片</li>
+			</ul>
+			<br>
+			<hr>
+			<br>
+			<h3>文本相关</h3>
+			<div class="text-sm-left text-xl-right text-lg-center text-md-justify text-danger text-capitalize font-weight-bold h2 ">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nostrum voluptas beatae fuga numquam quas distinctio laborum eligendi sit est.
+			</div>
+			<br>
+			<hr>
+			<br>
+			<h3>图片相关</h3>
+			<img class="img-fluid" src="2.jpg">
+			<img class="rounded" src="2.jpg">
+			<img class="rounded-circle" src="2.jpg">
+			<img class="img-thumbnail" src="2.jpg">
+			<br>
+			<hr>
+			<br>
+			<h3>按钮相关</h3>
+			<a class="btn btn-outline-danger btn-lg" href="#">红色</a>
+			<a class="btn btn-outline-info btn-sm" href="#">藏青</a>
+			<br>
+			<hr>
+			<br>
+			<input class="btn btn-danger" type="button" value="红色">
+			<button class="btn btn-success">绿色</button>
+			<a class="btn btn-warning" href="#">黄色</a>
+			<a class="btn btn-info btn-block" href="#">藏青色</a>
+			<a class="btn btn-primary" href="#">主要</a>
+			<a class="btn btn-secondary" href="#">次要</a>
+			<a class="btn btn-dark" href="#">深色</a>
+			<a class="btn btn-light" href="#">浅色</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show_uname(){
+				var s1=document.getElementById("uname_msg");
+				s1.innerHTML="用户名长度6~10位";
+			}
+			function check_uname(){
+				var n1=document.getElementById("uname");
+				var s1=document.getElementById("uname_msg");
+				var r=n1.value;
+				// 为空，显示×
+				// 长度错误，显示x 
+				// 正确，显示√
+				if(!r){
+					s1.innerHTML="×";
+				}else if(r.length<6 || r.length>10){
+					s1.innerHTML="×";
+				}else{
+					s1.innerHTML="√";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- input获取焦点，span显示长度 -->
+		<!-- input失去焦点，span做非空提示 -->
+		<input onfocus="show_uname()" onblur="check_uname()" type="text" id="uname">
+		<span id="uname_msg"></span>
+	</body>
+</html>

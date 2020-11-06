@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Student(sname, sage, sgender) {
+      this.sname = sname;
+      this.sage = sage;
+      this.sgender = sgender;
+    }
+    var father = {
+      money: 1000000,
+      house: "大别野"
+    }
+    var hmm = new Student("韩梅梅", 20, 0);
+    console.log(hmm.money, hmm.house);
+    // 更改子对象的原型对象
+    // 1、__proto__
+    // hmm.__proto__ = father;//不建议使用。
+    // 2、setPrototypeOf
+    Object.setPrototypeOf(hmm, father)
+    console.log(hmm.money, hmm.house);
+    console.log(hmm);
+  </script>
+</body>
+
+</html>

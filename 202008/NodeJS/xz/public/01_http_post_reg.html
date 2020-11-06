@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST请求注册</title>
+</head>
+
+<body>
+    用户名：<input type="text" id="uname"><br>
+    密码： <input type="password" id="upwd"><br>
+    <button onclick="reg()">注册</button>
+    <div id="result"></div>
+    <script>
+        function reg() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            //1、创建异步对象
+            var xhr = new XMLHttpRequest();
+            //4、接收响应，打开监听
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    result.innerHTML = res == 1 ? `<span style="color:red">注册成功</span><br><a href="./01_http_post_login.html">登录</a>` : `注册失败`;
+                }
+            }
+            // 2、创建请求
+            xhr.open("post", "/ajax/reg", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send(`uname=${_uname}&upwd=${_upwd}`);
+        }
+    </script>
+</body>
+
+</html>

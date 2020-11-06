@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #content {
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .top_height {
+      height: 377px;
+      background-color: #e8e8e8;
+    }
+
+    .bottom_height {
+      height: 233px;
+      background-color: #e8e8e8;
+      margin-top: 10px;
+    }
+
+    #content>div:nth-child(1) {
+      width: 609px;
+    }
+
+    #content>div:nth-child(2) {
+      width: 381px;
+    }
+
+    #content>div:nth-child(3) {
+      width: 377px;
+
+    }
+
+    #content>div:nth-child(4),
+    #content>div:nth-child(5),
+    #content>div:nth-child(6) {
+      width: 198px;
+      position: relative;
+    }
+
+    #content>div {
+      position: relative;
+    }
+
+    #content>div:first-child>div {
+      width: 245px;
+      height: 243px;
+      position: absolute;
+      top: 55px;
+      left: 65px;
+    }
+
+    #content>div:nth-child(2)>div {
+      width: 253px;
+      height: 221px;
+      position: absolute;
+      top: 63px;
+      left: 24px;
+    }
+
+    #content>div:nth-child(3)>div {
+      width: 149px;
+      height: 119px;
+      position: absolute;
+      top: 21px;
+      left: 33px;
+      padding-top: 1em;
+    }
+
+    #content>div:first-child>div p.title,
+    #content>div:nth-child(2)>div p.title {
+      font-size: 32px;
+      font-family: "simhei", Arial, Helvetica, sans-serif;
+      color: #333;
+    }
+
+    #content>div:nth-child(3)>div p.title {
+      font-size: 22px;
+      font-family: "simhei", Arial, Helvetica, sans-serif;
+      color: #333333;
+    }
+
+    #content>div:first-child>div p.desc,
+    #content>div:nth-child(2)>div p.desc {
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      margin-bottom: 24px;
+    }
+
+    #content>div:first-child>div p.price,
+    #content>div:nth-child(2)>div p.price {
+      font: 24px "simhei", Arial, Helvetica, sans-serif;
+      color: #0aa1ed;
+      margin-bottom: 12px;
+    }
+
+    #content>div:nth-child(3)>div p.price {
+      font: 22px "simhei", Arial, Helvetica, sans-serif;
+      color: #0aa1ed;
+      margin-bottom: 10px;
+    }
+
+    #content div:first-child div a,
+    #content div:nth-child(2) div a,
+    #content>div:nth-child(3) div a {
+      width: 130px;
+      height: 40px;
+      border-radius: 3px;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      background-color: #0aa1ed;
+      color: #ffffff;
+    }
+
+    #content>div:nth-child(1) img {
+      position: absolute;
+      right: 30px;
+      bottom: 21px;
+    }
+
+    #content>div:nth-child(2) img {
+      width: 292px;
+      height: 232px;
+      position: absolute;
+      right: 25px;
+      bottom: 20px;
+    }
+
+    #content>div:nth-child(3) img {
+      width: 198px;
+      height: 136px;
+      position: absolute;
+      top: 40px;
+      right: 17px;
+    }
+
+    .bottom_height img {
+      width: 198px;
+      height: 136px;
+    }
+
+    .bottom_height .title {
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      color: #333333;
+      font-weight: lighter;
+      text-align: center;
+    }
+
+    .bottom_height .price {
+      font: 24px "simhei", Arial, Helvetica, sans-serif;
+      margin-top: 5px;
+      color: #0aa1ed;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .bottom_height :nth-child(2) a,.bottom_height :nth-child(3) a,.bottom_height :nth-child(4) a {
+      text-decoration: none;
+      border-radius: 3px;
+      font: 14px "simhei", Arial, Helvetica, sans-serif;
+      padding: 6px 23px;
+      position: absolute;
+      bottom: 10px;
+      left: 51px;
+      background-color: #0aa1ed;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div class="top_height">
+      <div>
+        <p class="title">Apple MacBook Air系列</p>
+        <p class="desc">酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="study_computer_img1.png" alt="">
+    </div>
+    <div class="top_height">
+      <div>
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="desc">酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="study_computer_img2.png" alt="">
+    </div>
+    <div class="bottom_height">
+      <div>
+        <p class="title">联想E480C 轻薄系列</p>
+        <p class="price">￥5399.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="study_computer_img3.png" alt="">
+    </div>
+    <div class="bottom_height">
+      <img src="study_computer_img4.png" alt="">
+      <div>
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+    </div>
+    <div class="bottom_height">
+      <img src="study_computer_img5.png" alt="">
+      <div>
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+    </div>
+    <div class="bottom_height">
+      <img src="study_computer_img3.png" alt="">
+      <div>
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    @media (min-width: 576px){
+      .text-sm-justify{
+        text-align: justify !important;
+      }
+    }
+    @media (min-width: 768px){
+      .text-md-justify{
+        text-align: justify !important;
+      }
+    }
+    @media (min-width: 992px){
+      .text-lg-justify{
+        text-align: justify !important;
+      }
+    }
+    @media (min-width: 1200px){
+      .text-xl-justify{
+        text-align: justify !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>列表组的样式</h3>
+    <span class=""></span>
+    <ul class="list-unstyled list-group">
+      <li class="list-group-item list-group-item-danger disabled">A</li>
+      <li class="list-group-item list-group-item-dark">B</li>
+      <li class="list-group-item list-group-item-primary">C</li>
+      <li class="list-group-item list-group-item-secondary">D</li>
+      <li class="list-group-item list-group-item-success">E</li>
+      <li class="list-group-item list-group-item-warning">F</li>
+      <li class="list-group-item active">G</li>
+    </ul>
+    <br><br>
+    <h3>文本</h3>
+    <!-- font-weight-bold:文本加粗 -->
+    <div class="text-sm-left text-danger font-weight-bold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, et!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, et!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, et!</div>
+    <div class="text-danger">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, et!</div>
+    <!-- text-muted:灰色 text-uppercase/text-lowercase:文本大/小写 text-capitalize：文本首字母大写 -->
+    <div class="text-muted text-lowercase text-capitalize">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, et!</div>
+    <br><br>
+    <h3>图片</h3>
+    <!-- 图片可以缩放，不能超过图片原始大小 -->
+    <img class="img-fluid" src="1.jpg" alt="">
+    <img class="rounded" src="1.jpg" alt="">
+    <img class="rounded-circle" src="1.jpg" alt="">
+    <img class="img-thumbnail" src="1.jpg" alt="">
+    <br><br>
+    <h3>镂空按钮</h3>
+    <a href="#" class="btn btn-outline-danger btn-lg">红色</a>
+    <button class="btn btn-outline-info btn-sm">藏青色</button>
+    <br><br>
+    <h3>按钮相关</h3>
+    <input class="btn btn-danger" type="button" value="红色">
+    <button class="btn btn-success">绿色</button>
+    <a class="btn btn-warning" href="#">黄色</a>
+    <a class="btn btn-dark" href="#">深色</a>
+    <a class="btn btn-info btn-block" href="#">藏青色</a>
+    <a class="btn btn-light" href="#">黄色</a>
+    <a class="btn btn-primary" href="#">黄色</a>
+  </div>
+</body>
+
+</html>

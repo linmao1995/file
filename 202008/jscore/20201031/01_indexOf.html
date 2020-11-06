@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 查找指定字符串出现的位置
+    var msg = prompt("请输入内容");
+    // i==>"我草"第一次出现的位置
+    var i = msg.indexOf("我草");//msg.indexOf("我草",starti) starti默认为1
+    console.log(i)
+    if(i!=-1){//==-1 ==> 未找到指定字符串
+      document.write(`<h4 style="color:red">内容违规</h4>`);
+    }else{
+      document.write(`<h4 style="color:green">然哥说：${msg}</h4>`);
+    }
+  </script>
+</body>
+</html>

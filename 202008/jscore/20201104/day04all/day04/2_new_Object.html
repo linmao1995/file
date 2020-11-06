@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var lilei=new Object();//对象
+    lilei.sname="Li Lei";
+    lilei["sage"]=11;
+    lilei.intr=function(){
+      console.log(`I'm ${this.sname}, I'm ${this.sage}`);
+    }
+
+    var hmm=[];//关联数组
+    hmm.sname="Han Meimei";
+    hmm["sage"]=12;
+    hmm["intr"]=function(){
+      console.log(`I'm ${this.sname}, I'm ${this.sage}`);
+    }
+
+    lilei["intr"]();
+    hmm.intr();
+    
+    //同时访问两个学生不存在的班级属性
+    console.log(lilei.className, hmm.className);
+    //给两个对象都强行添加sex属性
+    lilei.sex=1;
+    hmm.sex=0;
+    console.log(lilei);
+    console.log(hmm);
+
+    //想遍历出李磊和hmm的所有成员
+    //复习第一阶段for in
+    for(var shuxing in lilei){
+      console.log(`${shuxing} : ${lilei[shuxing]}`);
+      //错误: console.log(`${shuxing}:${lilei.shuxing}`);
+      //错误: console.log(`${shuxing}:${lilei["shuxing"]}`);
+    }
+    for(var shuxing in hmm){
+      console.log(`${shuxing} : ${hmm[shuxing]}`);
+    }
+  </script>
+</body>
+</html>

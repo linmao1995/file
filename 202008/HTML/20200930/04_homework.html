@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="show2()">
+    <div id="divid"></div>
+    <br><br><br><br><br>
+    <div id="divid2"></div>
+    <script>
+        function show(){
+            var user = [
+                {
+                    "uid": 1,
+                    "uname": "dingding",
+                    "upwd": "123456",
+                    "email": "ding@qq.com",
+                    "phone": "13511011000",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "丁春秋",
+                    "gender": 0
+                },
+                {
+                    "uid": 2,
+                    "uname": "dangdang",
+                    "upwd": "123456",
+                    "email": "dang@qq.com",
+                    "phone": "13501234568",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "当当喵",
+                    "gender": 1
+                },
+                {
+                    "uid": 3,
+                    "uname": "doudou",
+                    "upwd": "123456",
+                    "email": "dou@qq.com",
+                    "phone": "13501234569",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "窦志强",
+                    "gender": 1
+                },
+                {
+                    "uid": 4,
+                    "uname": "yaya",
+                    "upwd": "123456",
+                    "email": "ya@qq.com",
+                    "phone": "13501234560",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "秦小雅",
+                    "gender": 0
+                },
+                {
+                    "uid": 5,
+                    "uname": "1111",
+                    "upwd": "111111",
+                    "email": "441977193@qq.com",
+                    "phone": "18357100796",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 6,
+                    "uname": "ABCD",
+                    "upwd": "123456",
+                    "email": "123@qq.com",
+                    "phone": "13538894495",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 7,
+                    "uname": "mohk",
+                    "upwd": "123456",
+                    "email": "11@qq.com",
+                    "phone": "13512312312",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 8,
+                    "uname": "121123",
+                    "upwd": "w13945128995",
+                    "email": "491000888@qq.com",
+                    "phone": "13213389258",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 9,
+                    "uname": "555555",
+                    "upwd": "5555555",
+                    "email": "55555555@163.com",
+                    "phone": "13400000000",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 10,
+                    "uname": "xuyong",
+                    "upwd": "123456",
+                    "email": "123456789@qq.com",
+                    "phone": "15525623622",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                }
+            ];
+            var d = document.getElementById("divid");
+            var str =
+                `
+            <table border="1px" cellspacing="0px">
+                <tr>
+                    <th>ID</th>
+                    <th>登录名称</th>
+                    <th>密码</th>
+                    <th>电子邮箱</th>
+                    <th>联系方式</th>
+                    <th>用户姓名</th>
+                    <th>用户性别</th>
+                    <th>操作</th>
+                </tr>
+            `;
+            for (var key in user) {
+                str +=
+                    `
+                <tr>
+                    <td>${user[key].uid}</td>
+                    <td>${user[key].uname}</td>
+                    <td>${user[key].upwd}</td>
+                    <td>${user[key].email}</td>
+                    <td>${user[key].phone}</td>
+                    <td>${user[key].user_name ? user[key].user_name : ""}</td>
+                    <td>${user[key].gender ? "男" : (user[key].gender === null ? "未知" : "女")}</td>
+                    <td>
+                        <a href="#">删除</a>&nbsp;&nbsp;<a href="#">修改</a>
+                    </td>
+                </tr>
+                `;
+            }
+            str += `</table>`;
+            d.innerHTML = str;
+        }
+
+        function show2(){
+            var user = [
+                {
+                    "uid": 1,
+                    "uname": "dingding",
+                    "upwd": "123456",
+                    "email": "ding@qq.com",
+                    "phone": "13511011000",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "丁春秋",
+                    "gender": 0
+                },
+                {
+                    "uid": 2,
+                    "uname": "dangdang",
+                    "upwd": "123456",
+                    "email": "dang@qq.com",
+                    "phone": "13501234568",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "当当喵",
+                    "gender": 1
+                },
+                {
+                    "uid": 3,
+                    "uname": "doudou",
+                    "upwd": "123456",
+                    "email": "dou@qq.com",
+                    "phone": "13501234569",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "窦志强",
+                    "gender": 1
+                },
+                {
+                    "uid": 4,
+                    "uname": "yaya",
+                    "upwd": "123456",
+                    "email": "ya@qq.com",
+                    "phone": "13501234560",
+                    "avatar": "img/avatar/default.jpg",
+                    "user_name": "秦小雅",
+                    "gender": 0
+                },
+                {
+                    "uid": 5,
+                    "uname": "1111",
+                    "upwd": "111111",
+                    "email": "441977193@qq.com",
+                    "phone": "18357100796",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 6,
+                    "uname": "ABCD",
+                    "upwd": "123456",
+                    "email": "123@qq.com",
+                    "phone": "13538894495",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 7,
+                    "uname": "mohk",
+                    "upwd": "123456",
+                    "email": "11@qq.com",
+                    "phone": "13512312312",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 8,
+                    "uname": "121123",
+                    "upwd": "w13945128995",
+                    "email": "491000888@qq.com",
+                    "phone": "13213389258",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 9,
+                    "uname": "555555",
+                    "upwd": "5555555",
+                    "email": "55555555@163.com",
+                    "phone": "13400000000",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                },
+                {
+                    "uid": 10,
+                    "uname": "xuyong",
+                    "upwd": "123456",
+                    "email": "123456789@qq.com",
+                    "phone": "15525623622",
+                    "avatar": null,
+                    "user_name": null,
+                    "gender": null
+                }
+            ];
+
+            var str =
+                `
+            <table border="1px" cellspacing="0px">
+                <tr>
+                    <th>ID</th>
+                    <th>登录名称</th>
+                    <th>密码</th>
+                    <th>电子邮箱</th>
+                    <th>联系方式</th>
+                    <th>用户姓名</th>
+                    <th>用户性别</th>
+                    <th>操作</th>
+                </tr>
+            `;
+
+            for(var key in user){
+                str+=
+                `
+                <tr>
+                    <td>${user[key].uid}</td>
+                    <td>${user[key].uname}</td>
+                    <td>${user[key].upwd}</td>
+                    <td>${user[key].email}</td>
+                    <td>${user[key].phone}</td>
+                    <td>${user[key].user_name?user[key].user_name:""}</td>
+                    <td>${user[key].gender?"男":(user[key].gender===0?"女":"未知")}</td>
+                    <td>
+                        <a href="#">修改</a>
+                        <a href="#">删除</a>
+                    </td>
+                </tr>
+                `;
+
+                divid2.innerHTML = str;
+            }
+        }
+    </script>
+</body>
+
+</html>

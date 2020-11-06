@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    // 用户输入
+    var msg = prompt("请输入内容");
+    //查找敏感词第一个字符出现的下标
+    var index = msg.indexOf("我草");
+    // index==-1==>未找到，
+    if (index != -1) {
+      document.write(`<h4 style="color:red">内容包含敏感词汇</h4>`)
+    } else {
+      document.write(`<h4 style="color:green">然哥说:${msg}</h4>`)
+    }
+  </script>
+</body>
+
+</html>

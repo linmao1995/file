@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var lilei={
+      sname:"Li Lei",
+      sage:11
+    }
+    //错误
+    //var lilei2=lilei;
+    //正确: 
+    //因为要传入旧对象，所以要定义形参
+    function kelong(oldObj){
+      //1. 创建一个新对象等着
+      var newObj={};
+      //2. 遍历旧对象中每个属性
+      for(var shuxing in oldObj){
+        //3. 每遍历一个属性，就给新对象添加一个同名的新属性: 属性名和属性值都要相同
+        //3.1 先获得当前属性的旧属性值
+        var value=oldObj[shuxing];
+        //3.2 为新对象强行添加同名新属性
+        newObj[shuxing]=value;
+      }
+      //4. 返回创建好的新对象
+      return newObj;
+    }
+    var lilei2=kelong(lilei);
+    console.log(lilei);
+    console.log(lilei2);
+    console.log(lilei==lilei2);//false
+    //         两个对象比较时
+    //         不比内容，比地址值
+  </script>
+</body>
+</html>

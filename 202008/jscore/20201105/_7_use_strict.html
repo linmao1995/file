@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    "use strict";
+
+    function Student(sname, sage){
+      //报错:Uncaught TypeError: Cannot set property 'sname' of undefined
+      //不能设置undefined的sname属性
+      this.sname=sname;
+      //this->undefined, this.sname=undefined.sname 报错！
+      this.sage=sage;
+    }
+    var lilei=new Student("Li Lei", 11);
+    console.log(lilei);
+    //      错误的使用了构造函数
+    var hmm=Student("Han Meimei",12);
+            //this->window
+            //this.sname=window.sname->全局
+            //this.sage=window.sage->全局
+    console.log(hmm);
+    console.log(sname);//全局变量
+    console.log(sage);//全局变量
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+    // 保护对象的属性
+    var stu = {
+      sid: 10001,
+      sname: "韩梅梅",
+      sage: 20,
+      salary: 10000
+    }
+    // 属性也是对象,缩微小对象
+    // 调用 Object.getOwnPropertyDescriptor(对象名,"属性名") 可访问属性的属性
+    // var info = Object.getOwnPropertyDescriptor(stu,"sid");
+
+    Object.defineProperties(stu, {
+      sid: {//sid不可修改
+        writable: false,//不可修改
+        configurable: false,//控制 writable 不可修改
+      },
+      salary: {
+        enumerable: false,//不可遍历
+        configurable: false,//控制 enumerable 不可修改
+      },
+      sname: {
+        configurable: false,//设置sname不可删除
+      }
+    })
+    // stu.sid=1002;//严格模式下报错。
+    // delete stu.sname;//严格模式下报错
+    
+    // 严格模式下，enumerable=false, 不可遍历，不会报错但是不显示。可以通过 .获取salary属性
+    for (var key in stu) {
+      console.log(`${key}:${stu[key]}`)
+    }
+    console.log(stu.salary)
+    console.log(stu)
+  </script>
+</body>
+
+</html>

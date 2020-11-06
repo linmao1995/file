@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      width: 1000px;
+      height: 620px;
+    }
+
+    #d1 {
+      width: 609px;
+      height: 377px;
+      background-color: #E8E8E8;
+      float: left;
+      margin: 0 10px 10px 0;
+    }
+
+    #d2 {
+      width: 381px;
+      height: 377px;
+      background-color: #e8e8e8;
+      float: right;
+      margin: 0 0 10px 0;
+    }
+
+    #empty {
+      height: 377px;
+    }
+
+    #d3,
+    #d4,
+    #d5,
+    #d6 {
+      width: 198px;
+      height: 235px;
+      background-color: #e8e8e8;
+      float: left;
+    }
+
+    #d3 {
+      width: 377px;
+      height: 233px;
+      background-color: #e8e8e8;
+      border: 0;
+      margin: 0 9px 10px 0;
+    }
+
+    #d4,
+    #d5 {
+      width: 198px;
+      height: 235px;
+      margin: 0 10px 10px 0;
+    }
+
+    #d6 {
+      margin: 0 0 5px 0;
+    }
+
+    #d1son {
+      width: 245px;
+      height: 243px;
+      margin: 70px 0 0 80px;
+    }
+
+    #content .title {
+      font-size: 32px;
+      color: #333333;
+    }
+
+    #content .desc {
+      font-size: 12px;
+      margin-bottom: 24px;
+      color: #666666;
+    }
+
+    #content .price {
+      font-size: 24px;
+      color: #0AA1ED;
+      margin-bottom: 12px;
+    }
+
+    /* 右浮动以右上角为起点，偏移设置margin-top margin-right */
+    #d1 img {
+      float: right;
+      margin-top: -270px;
+      margin-right: 30px;
+    }
+
+    #d2son {
+      width: 253px;
+      height: 221px;
+      margin: 60px 0px 0px 24px;
+    }
+
+    #d1 a {
+      width: 130px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      color: #ffffff;
+      border-radius: 2px;
+      float: left;
+      background-color: #12A5F0;
+      text-decoration: none;
+      text-align: center;
+      line-height: 40px;
+    }
+    #d2 a {
+      width: 130px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      color: #ffffff;
+      border-radius: 2px;
+      float: left;
+      background-color: #12A5F0;
+      text-decoration: none;
+      text-align: center;
+      line-height: 40px;
+    }
+    #d3 a {
+      width: 130px;
+      height: 40px;
+      border: 0;
+      outline: 0;
+      color: #ffffff;
+      border-radius: 2px;
+      float: left;
+      background-color: #12A5F0;
+      text-decoration: none;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    #d2 img {
+      float: right;
+      margin: -170px 20px 0 0;
+    }
+
+    #d3son {
+      width: 149px;
+      height: 143px;
+      margin: 30px 0 0 30px;
+    }
+
+    #d3son .title {
+      font-size: 22px;
+      color: #333333;
+    }
+
+    #d3 img {
+      float: right;
+      margin: -130px 0 0 0;
+    }
+
+    #d4 h2 {
+      color: #333333;
+      font-size: 12px;
+      font-weight: lighter;
+      text-align: center;
+    }
+    #d5 h2 {
+      color: #333333;
+      font-size: 12px;
+      font-weight: lighter;
+      text-align: center;
+    }
+    #d6 h2 {
+      color: #333333;
+      font-size: 12px;
+      font-weight: lighter;
+      text-align: center;
+    }
+
+    #d4 .price {
+      margin: 5px 0 0;
+      color: #0AA1ED;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 35px;
+    }
+    #d5 .price {
+      margin: 5px 0 0;
+      color: #0AA1ED;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 35px;
+    }
+    #d6 .price {
+      margin: 5px 0 0;
+      color: #0AA1ED;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      height: 35px;
+    }
+    #d4,#d5{
+      margin: 0 10px 10px 0;
+      text-align: center;
+    }
+    #d6{
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+
+    #d4 a {
+      padding: 6px 23px;
+      text-decoration: none;
+      background-color: #0AA1ED;
+      color: #ffffff;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #d5 a {
+      padding: 6px 23px;
+      text-decoration: none;
+      background-color: #0AA1ED;
+      color: #ffffff;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #d6 a {
+      padding: 6px 23px;
+      text-decoration: none;
+      background-color: #0AA1ED;
+      color: #ffffff;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div id="d1">
+      <div id="d1son">
+        <p class="title">Apple MacBook Air系列</p>
+        <p class="desc">酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+        <p class="price">￥6988.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="../20201014/study_computer_img1.png" alt="">
+    </div>
+    <div id="d2">
+      <div id="d2son">
+        <p class="title">小米Air 金属超轻薄</p>
+        <p class="desc">酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+        <p class="price">￥3488.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="../20201014/study_computer_img2.png" alt="">
+    </div>
+    <div id="empty"></div>
+    <div id="d3">
+      <div id="d3son">
+        <p class="title">联想E480C 轻薄系列</p>
+        <p class="price">￥5399.00</p>
+        <a href="#">查看详情</a>
+      </div>
+      <img src="../20201014/study_computer_img3.png" alt="">
+    </div>
+    <div id="d4">
+      <img src="../20201014/study_computer_img4.png" alt="">
+      <h2>华硕RX310 金属超极本</h2>
+      <p class="price">￥4966.00</p>
+      <a href="#">查看详情</a>
+    </div>
+    <div id="d5">
+      <img src="../20201014/study_computer_img5.png" alt="">
+      <h2>华硕RX310 金属超极本</h2>
+      <p class="price">￥4966.00</p>
+      <a href="#">查看详情</a>
+    </div>
+    <div id="d6">
+      <img src="../20201014/study_computer_img3.png" alt="">
+      <h2>华硕RX310 金属超极本</h2>
+      <p class="price">￥4966.00</p>
+      <a href="#">查看详情</a>
+    </div>
+  </div>
+</body>
+
+</html>

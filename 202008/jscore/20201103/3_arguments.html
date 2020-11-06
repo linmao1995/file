@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function argu() {
+      if (arguments.length == 0) {
+        console.log(`手机支付`)
+      } else if (arguments.length == 1) {
+        console.log(`现金支付，本次支付￥：${arguments[0]}`)
+      } else {
+        console.log(`刷卡支付，卡号:${arguments[0]}   支付￥：${arguments[2]}`)
+      }
+    }
+    // argu();
+    // argu(100);
+    argu("13579246810", "12346", "999")
+  </script>
+</body>
+
+</html>

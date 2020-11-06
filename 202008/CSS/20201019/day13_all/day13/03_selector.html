@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div:empty{
+				/* border:1px solid #f00; */
+				width: 100px;height: 100px;
+				background: #ff0;
+			}
+			input:empty{background-color: #FFFF00;}
+			a:not(:only-child){
+				display: block;
+				width: 100px;height: 100px;
+				background-color: #00FFFF;
+			}
+			#d1::before{
+				/*这个伪元素要显示的数据*/
+				content:"蒙奇.D.路飞说:";  
+				width: 100px;height: 100px;
+				background-color: #ff0;
+				display: block;
+			}
+			#d1::after{
+				content:"---------汉库克成为了海贼王！！";
+				width: 100px;height: 100px;
+				background-color: #ff0;
+			}
+			#d2{
+				width: 200px;height: 200px;
+				background-color: #0ff;
+			}
+			#d2>div{
+				width: 100px;height: 100px;
+				background-color: #ff0;
+				margin-top: 0px;
+			}
+			#d2::before{
+				content: "";
+				display: table;
+			}
+			#parent{
+				border: 2px solid #000;
+			}
+			#parent>div{width: 100px;height: 100px;float: left;}
+			#parent div:first-child{background: #ff0;}
+			#parent div:nth-child(2){background: #0ff;}
+			#parent div:nth-child(3){background: #f0f;}
+			#parent::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<div id="d2">
+			<!-- <table></table> -->
+			<div></div>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="d1">
+			
+			我是要成为海贼王的男人！！！
+			
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div>
+			<a href="#">1</a>
+		</div>
+		<div>
+			<a href="#">1</a>
+			<a href="#">1</a>
+			<a href="#">1</a>
+		</div>
+		<input type="text" value="123">
+		<div></div>
+		<div></div>
+	</body>
+</html>

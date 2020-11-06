@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <script>
+        function login() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            if (!_uname) {
+                span1.innerHTML = "用户名不能为空";
+                return;
+            }
+            if (!_upwd) {
+                span2.innerHTML = "密码不能为空";
+                return;
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    msg.innerHTML = res == 1 ? "登录成功" : "用户名或密码错误";
+                }
+            }
+            xhr.open("get", '/ajax/http_get_login?uname=' + _uname + "&upwd=" + _upwd, true);
+            xhr.send();
+        }
+        //验证非空
+        // function 
+    </script>
+</head>
+
+<body>
+    <input type="text" id="uname"><span style="color: red;" id="span1"></span><br>
+    <input type="password" id="upwd"><span style="color: red;" id="span2"></span><br><br>
+    <button onclick="login()">登录</button>
+    <div id="msg" style="color: red;"></div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Studeng(sname, sage) {
+      this.sname = sname;
+      this.sage = sage;
+    }
+
+    var lilie = new Studeng("李雷", 20);
+    var hmm = {
+      sname: "韩梅梅",
+      sage: 18
+    };
+
+    var father = {
+      money: 1000000000,
+      house: function () {
+        return `很多很多的房。。。`
+      }
+    }
+
+    Object.setPrototypeOf(hmm, father);
+    console.log(hmm)
+  </script>
+</body>
+
+</html>

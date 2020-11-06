@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 使用call()改变this指向
+    var getSum = function (salary, bonus) {
+      console.log(`${this.ename}的总工资为${salary + bonus}`)
+      return salary + bonus;
+    }
+
+    var hmm = {
+      ename: "韩梅梅",
+      eage: 20
+    }
+    // getSum.call(参数1,参数2,参数3)=====>此时调用this�

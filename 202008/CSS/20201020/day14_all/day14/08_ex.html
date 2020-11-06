@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@keyframes liangliangjump{
+				from{transform:translate(0px,0px) ;background-image: url(chengliang.jpg)}
+				25%{transform:translate(160px,210px);background-image: }
+				50%{transform:translate(280px,80px);background-image:url(dongdong.jpg);}
+				75%{transform:translate(160px,210px);background-image: }
+				to{transform: translate(0px,0px);background-image: url(chengliang.jpg)}
+			}
+			#d1{
+				width: 600px;height: 600px;
+				background: url(kun.jpg) no-repeat;
+				background-size: 100%;
+			}
+			#d2{
+				width: 60px;height: 60px;
+				background: url(chengliang.jpg) no-repeat;
+				background-size: 100%;
+				border-radius: 50%;
+				position: absolute;
+				top:178px;left: 207px;
+				animation: liangliangjump 10s infinite;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<div id="d2"></div>
+	</body>
+</html>

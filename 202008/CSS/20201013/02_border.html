@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #d1 {
+      width: 200px;
+      height: 200px;
+      /*实线 solid  点虚线 dotted  线状虚线 dashed  双实线 double*/
+      /* border: 1px solid red; */
+      border-top: solid #336699;
+      border-right: dashed #996633;
+      border-bottom: dotted #363636;
+      border-left: double #939393;
+
+      border-style: solid;
+      border-width: 2px;
+      border-color: #336699;
+    }
+
+    #d2 {
+      width: 0px;
+      /* 
+
+      border-top: 20px solid #3366dd;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid  transparent;
+      border-left: 20px solid  transparent; 
+*/
+
+      border: 20px solid transparent;
+      border-top-color: #3366dd;
+    }
+
+    #d3 {
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      /* border-top-right-radius: 50%; */
+      /* border-bottom-right-radius: 50%; */
+      /* border-bottom-left-radius: 50%; */
+      /* border-top-left-radius: 50%; */
+      border-radius: 50%;
+
+      box-shadow: 300px -100px;
+    }
+    /* #d4{
+      width: 300px;
+      height: 100px;
+      border: 1px solid grey;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius:100px;
+      border-top-left-radius: 100px;
+    } */
+  </style>
+</head>
+
+<body>
+  <h3>元素阴影</h3>
+
+  <br><br><br><br><br>
+  <div id="d1"></div>
+  <div id="d2"></div>
+  <br><br>
+  <h3>圆角</h3>
+  <div id="d3"></div>
+  <div id="d4"></div>
+</body>
+
+</html>

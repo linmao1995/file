@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 定义动画 */
+			@keyframes change{
+				0%{background: #f00;border-radius: 0%;}
+				25%{background: #ff0;border-radius: 50%;}
+				50%{background: #0ff;border-radius: 0%;}
+				75%{background: #00f;border-radius: 50%;}
+				100%{background: #0f0;border-radius: 0%;}
+			}
+			@keyframes jump{
+				from{background: #f00;border-radius: 0%;transform: translateY(0px);}
+				25%{background: #ff0;border-radius: 50%;transform: translateY(800px);}
+				50%{background: #0ff;border-radius: 0%;transform: translateY(0px);}
+				75%{background: #00f;border-radius: 50%;transform: translateY(800px);}
+				to{background: #0f0;border-radius: 0%;transform: translateY(0px);}
+			}
+			#d1{
+				width: 200px;height: 200px;
+				/* 调用动画 */
+				/* 1.设置调用动画的名称 */
+				/* animation-name: jump; */
+				/* 2.设置动画的时间 */
+				/* animation-duration: 2s; */
+				/* 3.设置时间曲线函数 */
+				/* animation-timing-function: ease; */
+				/* 4.设置动画的延迟时间 */
+				/* animation-delay: 0s; */
+				/* 5.设置动画的执行次数 */
+				/* animation-iteration-count: infinite; */
+				/* 6.设置动画的执行顺序 */
+				/* animation-direction: alternate; */
+				/* 动画的简写方式 */
+				animation: change 3s 2s;
+				/* 7.动画的填充模式 */
+				animation-fill-mode: both;
+			}
+			#d1:hover{
+				/* animation: change 3s; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+	</body>
+</html>

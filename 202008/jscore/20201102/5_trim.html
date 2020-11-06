@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str = "      zhang   dong    ";
+    //去掉开头空字符
+    function trimleft(key) {
+      return key.replace(/^\s*/, "")
+    }
+    // 去掉结尾空字符
+    function trimright(key) {
+      return key.replace(/\s*$/, "");
+    }
+    //去掉开头和结尾两端空字符
+    function trims(key) {
+      return key.replace(/^\s*|\s*$/g, "")
+    }
+    console.log(`去掉开头空字符：${trimleft(str)}`)
+    console.log(`去掉结尾空字符：${trimright(str)}`)
+    console.log(`去掉两端空字符2：${str.trim()}`)
+    console.log(`去掉两端空字符1：${trims(str)}`)
+    // console.log(str.trimLeft())
+    // console.log(str.trimRight())
+    // console.log(str.trim())
+  </script>
+</body>
+
+</html>

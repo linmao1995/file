@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h3>折叠导航栏</h3>
+    
+    <br><br>
+    <h3>手风琴</h3>
+    <div id="parent">
+      <div class="card">
+        <div class="card-header">
+          <a data-toggle="collapse" href="#s1" href="#">东东</a>
+        </div>
+        <div id="s1" data-parent="#parent" class="collapse">
+          <div class="card-body">
+            杨幂
+          </div>
+        </div>
+        <div class="card-header">
+          <a data-toggle="collapse" href="#s2" href="#">亮亮</a>
+        </div>
+        <div id="s2" data-parent="#parent" class="collapse">
+          <div class="card-body">
+            煎饼
+          </div>
+        </div>
+        <div class="card-header">
+          <a data-toggle="collapse" href="#s3" href="#">然然</a>
+        </div>
+        <div id="s3" data-parent="#parent" class="collapse">
+          <div class="card-body">
+            高圆圆
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <h3>卡片</h3>
+    <div class="card">
+      <div class="card-header">卡片头</div>
+      <div class="card-body">卡片内容</div>
+      <div class="card-footer">
+        <a href="#">版权所有</a>
+      </div>
+    </div>
+    <br><br>
+    <h3>折叠</h3>
+    <button data-toggle="collapse" data-target="#collapse" class="btn btn-info">折叠</button>
+    <div id="collapse" class="collapse">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, esse!</div>
+    <br><br>
+    <h3>响应式导航栏</h3>
+    <div class="navbar navbar-expand-lg">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">导航一</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">导航一</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">导航一</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">导航一</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">导航一</a></li>
+      </ul>
+    </div>
+    <br><br>
+    <h3>胶囊导航</h3>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a class="nav-link active" href="#">电脑</a></li>
+      <li class="nav-item"><a data-toggle="pill" href="#t1" class="nav-link" href="#">电脑1</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">电脑2</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">电脑3</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">电脑</a></li>
+      <li class="nav-item"><a data-toggle="pill" href="#t5" class="nav-link" href="#">电脑5</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">电脑</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">电脑</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active">联想</div>
+      <div id="t1" class="tab-pane">联想1</div>
+      <div class="tab-pane">联想2</div>
+      <div class="tab-pane">联想3</div>
+      <div class="tab-pane">联想4</div>
+      <div id="t5" class="tab-pane">联想5</div>
+    </div>
+    <br><br>
+    <h3>选项卡导航</h3>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a data-toggle="tab" href="#d1" class="nav-link active" href="#">口红</a></li>
+      <li class="nav-item"><a data-toggle="tab" href="#d2" class="nav-link" href="#">口红1</a></li>
+      <li class="nav-item"><a data-toggle="tab" href="#d3" class="nav-link" href="#">口红2</a></li>
+      <li class="nav-item"><a data-toggle="tab" href="#d4" class="nav-link" href="#">口红3</a></li>
+      <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#">口红4</a></li>
+      <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#">口红5</a></li>
+      <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#">口红6</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="d1" class="tab-pane active">迪奥</div>
+      <div id="d2" class="tab-pane">迪奥1</div>
+      <div id="d3" class="tab-pane">迪奥2</div>
+      <div id="d4" class="tab-pane">迪奥3</div>
+      <div class="tab-pane">迪奥4</div>
+      <div class="tab-pane">迪奥5</div>
+      <div class="tab-pane">迪奥6</div>
+    </div>
+    <br><br>
+    <h3>导航条</h3>
+    <!-- nav-item 默认对li没有修饰 -->
+    <!-- nav-justified 父元素添加之后，影响了后台nav-item的样式，让每个item的宽度相同 -->
+    <ul class="nav nav-justified">
+      <li class="nav-item"><a class="nav-link" href="#">今日</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">今日推荐</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">今日推荐</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">今日推荐</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">今日推荐</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">今日推荐</a></li>
+
+    </ul>
+    <br><br>
+    <h3>信息提示框</h3>
+    <div class="alert alert-danger alert-dismissible">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, molestiae?
+      <span class="close" data-dismiss="alert">×</span>
+    </div>
+    <br><br>
+    <h3>下拉菜单</h3>
+    <div class="dropdown">
+      <button data-toggle="dropdown" class="btn btn-success dropdown-toggle">电视剧</button>
+      <ul class="list-unstyled dropdown-menu">
+        <li><a href="#">诛仙</a></li>
+        <li><a href="#">诛仙</a></li>
+        <li><a href="#">诛仙</a></li>
+        <li><a href="#">诛仙</a></li>
+        <li><a href="#">诛仙</a></li>
+      </ul>
+    </div>
+    <br><br>
+    <h3>按钮组</h3>
+    <div class="btn-group btn-group-vertical">
+      <a class="btn btn-success" href="#">A</a>
+      <a class="btn btn-danger" href="#">B</a>
+      <a class="btn btn-info" href="#">C</a>
+      <a class="btn btn-primary" href="#">D</a>
+      <a class="btn btn-light" href="#">E</a>
+      <a class="btn btn-dark" href="#">F</a>
+      <a class="btn btn-warning" href="#">G</a>
+      <button>百度</button>
+    </div>
+  </div>
+</body>
+
+</html>

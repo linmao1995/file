@@ -1,0 +1,40 @@
+a {
+  color: #00ff00;
+
+  // 伪类嵌套需要添加&占位符
+  &:hover {
+    font-size: 20px;
+  }
+}
+
+#contents,
+p,
+.c {
+  a {
+    color: #00ff00;
+  }
+}
+
+#content {
+  color: red;
+
+  div {
+    color: white;
+
+    p {
+      color: #00ff00;
+
+      span {
+        color: yellow;
+      }
+
+      a {
+        color: gray;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

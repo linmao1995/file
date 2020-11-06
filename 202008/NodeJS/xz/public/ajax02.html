@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取用户信息</title>
+    <script>
+        function getinfo() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            //1、创建异步对象
+            var xhr = new XMLHttpRequest();
+            //4、接收响应,打开监听
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    userinfo.innerHTML = res;
+                }
+            }
+            //2、创建请求,打开连接
+            xhr.open("get", `/ajax/getinfo?uname=${_uname}&upwd=${_upwd}`, true)
+            //3、发送请求
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="uname"><br>
+    <input type="password" id="upwd"><br><br>
+    <button onclick="getinfo()">提交</button>
+    <div id="userinfo"></div>
+</body>
+
+</html>

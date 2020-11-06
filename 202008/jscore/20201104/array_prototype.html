@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 定义一个数组元素求和
+    Array.prototype.sum = function(){
+      console.log(this);
+      var total = 0;
+      for (var i = 0; i <= this.length - 1; i++) {
+        total += this[i];
+      }
+      return total;
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    var arr = [1, 2, 3, 4];
+    console.log(arr.sum());
+    var arr1 = [1, 2, 3, 4, 5];
+    console.log(arr1.sum());
+  </script>
+</body>
+
+</html>

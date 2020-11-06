@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;}
+			div{border:1px solid #000;}
+			#content{
+				width: 1000px;
+				margin: 0 auto;
+				display: flex;
+			}
+			#content>div:nth-child(1){flex:0 0 20%;}
+			#content>div:nth-child(2){flex:0 0 60%;}
+			#content>div:nth-child(3){flex:0 0 20%;}
+			#content>div:nth-child(1)>ul{list-style: none;}
+			#content>div:nth-child(1)>ul li{border:5px solid purple;}
+			#content>div:nth-child(2)>div{display: flex;border:0;}
+			#content>div:nth-child(2)>div>div{flex:0 0 25%;border:0;}
+			#content>div:nth-child(2)>div>div>img{
+				width: 100%;padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div>
+				<ul>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+				</ul>
+			</div>
+			<div>
+				<div>
+					<div><img src="2.jpg"></div>
+					<div><img src="2.jpg"></div>
+					<div><img src="2.jpg"></div>
+					<div><img src="2.jpg"></div>
+				</div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit esse maiores obcaecati sint optio? Ea quisquam debitis temporibus earum minima praesentium officia dolores nemo itaque dolorum qui sequi architecto possimus!
+			</div>
+			<div>
+				右侧广告: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fuga modi culpa magni odit id accusamus cumque aliquid. Eveniet aliquam possimus consequatur reiciendis quos officia modi vero eos ipsa consectetur.
+			</div>
+		</div>
+	</body>
+</html>

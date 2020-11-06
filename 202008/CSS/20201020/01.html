@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #parent {
+      width: 1000px;
+      height: 600px;
+      border: 2px solid #000000;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #parent div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background-color: #00ff00;
+      font: 32px 'my boli';
+      /* 当主轴空间有剩余时，是否自动增长 默认0:不增长 1：增长 */
+      flex-grow: 1;
+    }
+    #parent div:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      background-color: #ff0000;
+      font: 32px 'my boli';
+      flex-grow: 5;
+    }
+    #parent div:nth-child(3) {
+      width: 200px;
+      height: 200px;
+      background-color: #0000ff;
+      font: 32px 'my boli';
+      flex-grow: 10;
+    }
+
+    /* 设置项目在主轴上排列顺序，数值越小离起始点越近 */
+    #parent div:nth-child(1) {
+      
+    }
+
+    #parent div:nth-child(2) {
+      
+    }
+
+    #parent div:nth-child(3) {
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+
+</html>

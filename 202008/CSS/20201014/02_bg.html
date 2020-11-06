@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #d1{
+      width: 500px;
+      height: 500px;
+      border: 2px solid #ff000f;
+      background-color: purple;
+      background-image: url("./cat.jpg");
+      /* 背景图片平铺  repeat 平铺 no-repeat 不平铺*/
+      background-repeat:no-repeat;
+      /* background-position: 50% 50%; */
+      background-position: left bottom;
+      /* 设置背景图片的大小 */
+      background-size: 200px;
+    }
+    #d1>span{
+      color: red;
+    }
+    #d2{
+      width: 500px;
+      height: 500px;
+      background-image: url("pic.jpg");
+      background-repeat: no-repeat;
+      background-color:grey;
+      /* background-size: cover; */
+      background-size: contain;
+
+    }
+    a{
+      text-decoration: none;
+    }
+    #d3{
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+      background: url("cat.jpg") no-repeat 80% 10%;
+    }
+  </style>
+</head>
+<body>
+  <div id="d3"></div>
+  <br><br><br>
+  <div id="d1"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sunt ratione unde omnis. Minus, suscipit. Molestiae
+  fuga impedit dolorum incidunt, aperiam obcaecati deleniti, autem facilis nulla provident similique! Provident, tenetur.</span></div>
+  <div id="d2"></div>
+</body>
+</html>

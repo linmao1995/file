@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // 重写
+    
+    // 构造函数
+    function Student(sname, sage) {
+      this.sname = sname;
+      this.sage = sage;
+    }
+    //自己添加toString()
+    Student.prototype.toString = function () {
+      return `{sname:"${this.sname}",sage:${this.sage}}`;
+    }
+    // 通过构造函数创建对象
+    var lilei = new Student("李雷", 20);
+    console.log(lilei.toString());
+
+    // 使用{}创建对象,此时原型对象是Object，不能轻易修改其中的方法。
+    var hmm = {
+      sname: "韩梅梅",
+      sage: 18,
+      toString: function () {
+        return `{sname:"${this.sname}",sage:${this.sage}}`;
+      }
+    }
+    console.log(hmm.toString())
+  </script>
+</body>
+
+</html>

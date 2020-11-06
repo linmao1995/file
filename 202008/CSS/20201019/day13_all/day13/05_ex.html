@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.top_height{height: 377px;background: #36d;margin-bottom: 10px;}
+			.bottom_height{height: 233px;background: #36d;}
+			#content{
+				width: 1000px;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			#content>div:first-child{width: 609px;}
+			#content>div:nth-child(2){width: 381px;}
+			#content>div:nth-child(3){width: 377px;}
+			#content>div:nth-child(4),#content>div:nth-child(5),#content>div:nth-child(6){width: 198px;}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="top_height"></div>
+			<div class="top_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+		</div>
+	</body>
+</html>

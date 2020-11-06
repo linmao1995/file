@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var father = {
+      name: "张三",
+      age: 20,
+      gender: 1,
+      info: function () {
+        console.log(`我叫${this.name},${this.gender},今年${this.age}`)
+      }
+    }
+    // 通过 Object.create() 创建子对象,会自动继承父对象,创建子对象的同时添加属性
+    var hmm = Object.create(father, {
+      name: {
+        value: "韩梅梅",
+        writable: false,
+        enumerable: true,
+        configurable: false,
+      },
+      age: {
+        value: 18,
+        writable: true,
+        enumerable: true,
+        configurable: false,
+      }
+    });
+
+    console.log(hmm)
+  </script>
+</body>
+
+</html>

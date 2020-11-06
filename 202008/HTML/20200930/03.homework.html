@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showtable()">展示表格</button>
+    <div id="ids"></div>
+    <script>
+        function showtable() {
+            var student = [
+                { id: 1001, name: "张三", age: 20 },
+                { id: 1002, name: "李四", age: 30 },
+                { id: 1003, name: "王五", age: 44 },
+                { id: 1004, name: "赵六", age: 25 },
+                { id: 1005, name: "钱七", age: 31 },
+            ];
+
+            var d = document.getElementById("ids");
+            var str = `
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </tr>
+            `;
+
+            for (var key in student) {
+                str += `
+                    <tr>
+                        <td>${student[key].id}</td>
+                        <td>${student[key].name}</td>
+                        <td>${student[key].age}</td>
+                    </tr>
+                `;
+            }
+            str += `</table>`;
+            d.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

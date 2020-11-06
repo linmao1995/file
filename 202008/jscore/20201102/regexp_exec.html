@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str = "老师说：用小红 朋友 是 我的造句，小亮说：小红是我的朋友，小然说：朋友，小红是我的";
+    var reg = /小[\u4e00-\u9fa5]/g;
+    do {
+      var arr = reg.exec(str);
+      console.log(arr)
+    } while (arr != null)
+  </script>
+</body>
+
+</html>

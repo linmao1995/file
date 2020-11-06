@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #content {
+      height: 500px;
+      border: 2px solid #000000;
+      font: 30px jokerman;
+      display: flex;
+      /* 设置主轴方向 */
+      flex-direction: row-reverse;
+      /* 设置主轴方向的换行 */
+      flex-wrap: wrap;
+      /* 主轴方向+换行 简写 */
+      /* flex-flow: direction wrap; */
+
+      /* 设置项目们在主轴上的对齐方式 */
+      justify-content: flex-start;
+      /* 设置项目们在交叉轴上的对齐方式 */
+      align-items: flex-end;
+    }
+
+    #content>div:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      /* padding-top: 20px; */
+      background-color: #00ffff;
+      align-self: flex-start;
+    }
+
+    #content>div:nth-child(2) {
+      width: 100px;
+      height: 100px;
+      background-color: #00ff00;
+      align-self: center;
+    }
+
+    #content>div:nth-child(3) {
+      width: 100px;
+      height: 100px;
+      background-color: #ff00ff;
+      align-self: flex-end;
+    }
+
+    #content>div:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      background-color: #ffff00;
+      align-self: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>9</div>
+  </div>
+</body>
+
+</html>

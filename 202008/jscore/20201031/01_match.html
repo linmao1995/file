@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 查找指定字符串出现的位置
+    // var msg = prompt("请输入内容");
+    // var msg = "老师说让用小红，朋友，是，我的造句，小然：朋友，小红是我的，小亮：小红是我的朋友"
+    var msg = "老师叫我打开weixin，让我加微信，我拿出手机打开了wx";
+    // 那天，我去了她家，然哥说：我草，你家真大 
+    // i===> 返回一个数组，未找到 i==null
+    // var i = msg.match(/(微|w(ei)?)\s*(信|x(in)?)/g);
+    var reg = /(微|w(ei)?)\s*(信|x(in)?)/g;
+    var _res = reg.exec(msg);
+    console.log(_res)
+    // return;
+    // if (i != null) {//null==>未找到指定格式字符串
+    //   document.write(`<h4 style="color:red">内容违规</h4>`);
+    // } else {
+    //   document.write(`<h4 style="color:green">然哥说：${msg}</h4>`);
+    // }
+  </script>
+</body>
+
+</html>

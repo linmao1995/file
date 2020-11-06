@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+/* 			选择器{
+				   样式声明;
+			  } 
+				选择器就是一个条件，页面中符合这个条件的元素应用这个样式
+				*/
+				div{
+					color:pink;
+					background-color: purple;
+					font-size: 36px;
+				}
+				h4{
+					color:red;
+					background-color: green;
+				}
+				h6{
+					color:red;
+					font-size: 40px;
+				}
+		</style>
+		<link rel="stylesheet" href="my.css">
+	</head>
+	<body>
+		<h4>继承性---子元素会应用父元素的样式---我们只关注字体样式</h4>
+		<h6>
+			我是h6
+			<span>我是h6的儿子span 
+				<a href="#">我是h6的儿子span的a</a>
+				<b>我是h6的儿子span的儿子</b>
+			</span>
+		</h6>
+		<br>
+		<hr>
+		<br>
+		<h4>外部样式</h4>
+		<h5>Lorem ipsum dolor sit amet.</h5>
+		<br>
+		<hr>
+		<br>
+		<h4>内部样式</h4>
+		<div>我想带你去看海</div>
+		<div>我想带你去船头照相</div>
+		<br>
+		<hr>
+		<br>
+		<h4>行内样式，内联样式</h4>
+		<p style="color:red;background-color:yellow;font-size: 20px;">我想带你爬山</p>
+		<p style="color:red;background-color:yellow;font-size: 20px;">我想带去山顶拍照</p>
+	</body>
+</html>

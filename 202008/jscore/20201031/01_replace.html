@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var msg = prompt("请输入内容");
+    // // i ==>第一次出现的位置，没找到i=-1
+    // var i = msg.replace(/([我卧|wo])\s*([草槽|cao])/i,function(keyword){
+    //   return keyword;
+    // });//i忽略大小写
+    // console.log(i)
+    // // var i = msg.match(/(微|w(ei)?)\s*(信|x(ei)?)/i);
+    // if (i != -1) {//-1未找到匹配内容
+    //   document.write(`<span style="color:red">内容违法</span>`)
+    // } else {
+    //   document.write(`<span style="color:green">${msg}</span>`)
+    // }
+    var str = "you can you up,no can no bb";
+    var num = str.match(/\b[a-z]/g);
+    var s = str.replace(/\b[a-z]/g, function (keyword) {
+      return keyword.toUpperCase();
+    });
+    console.log(s)
+    console.log(`共替换${num == null ? 0 : num.length}`)
+    //([微|w(ei)?])\s*([信|x(in)?])
+
+  </script>
+</body>
+
+</html>

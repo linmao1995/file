@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+    // 保护对象结构
+
+    var stu = {
+      sid: 1001,
+      sname: "张三",
+      sage: 18
+    }
+    // 1、防扩展，只能防止添加属性，不能防止删除对象属性。
+    // Object.preventExtensions(stu);
+    // stu.Sid = 1002;//报错，
+
+    Object.defineProperties(stu, {
+      sid: {
+        writable: false,
+      },
+      sage: {
+        enumerable: false
+      }
+    })
+
+    // Object.seal()
+
+    // 1、调用 Object.preventExtensions()
+    // 2、自动设置 configurable:false
+    Object.seal(stu)
+
+
+    // stu.sid = 1002;//报错。
+
+    //sage不能遍历。
+    for (var key in stu) {
+      console.log(`${key}:${stu[key]}`)
+    }
+
+    // delete stu.sname; //报错。
+
+    // 2、密封对象   禁止删除对象所有属性。Object.seal(obj)
+
+    // 3、Object.freeze(obj) 冻结，禁止添加删除属性，禁止修改属性值。
+    var dbconfig = {
+      host: "127.0.0.1",
+      port: 3306,
+      user: "root",
+      password: "root"
+    }
+    Object.freeze(dbconfig);
+    // dbconfig.port = 3307;//报错
+    console.log(dbconfig)
+    // console.log(stu)
+  </script>
+</body>
+
+</html>

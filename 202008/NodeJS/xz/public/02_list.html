@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getlist()">
+    <!-- <button onclick="getlist()">显示用户列表</button> -->
+    <div id="result"></div>
+    <script>
+        function getlist(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var _res = xhr.responseText;
+                    var _user = JSON.parse(_res);
+                    var str = `<table border="1px" cellspacing="0" bordercolor="black">
+                                <tr>
+                                    <th>UID</th>
+                                    <th>用户名</th>
+                                    <th>用户邮箱</th>
+                                    <th>联系电话</th>
+                                    <th>真实姓名</th>
+                                    <th>性别</th>
+                                    <th>操作</th>
+                                </tr>`;
+                    for(var key in _user){
+                        str+=`<tr>
+                                <td>${_user[key].uid}</td>
+                                <td>${_user[key].uname}</td>
+                                <td>${_user[key].email}</td>
+                                <td>${_user[key].phone}</td>
+                                <td>${_user[key].user_name? _user[key].user_name:""}</td>
+                                <td>${_user[key].gender?"男":(_user[key].gender==0?"女":"保密")}</td>
+                                <td>
+                                    <a href="./02_restful_put.html">修改</a>    
+                                    <a href="./02_restful_delete.html">删除</a>    
+                                </td>
+                            </tr>`;
+                    }
+                    str+=`</table>`;
+                    result.innerHTML = str;
+                }
+            }
+            xhr.open("get","/ajax/user_list",true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

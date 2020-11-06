@@ -1,0 +1,23 @@
+// 声明变量
+$height:200px;
+$width:200px;
+$background-color:red;
+$first:1px;
+$second:solid;
+$third:#000;
+$font_size:20px;
+$color:#00f;
+
+div {
+  $fs: 30px;
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+  border: $first $second $third;
+  font-size: $font_size;
+  color: $color;
+}
+
+div2 {
+  font-size: $font_size;
+}

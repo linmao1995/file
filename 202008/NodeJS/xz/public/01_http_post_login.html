@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post请求登录</title>
+</head>
+
+<body>
+    用户名:<input type="text" id="uname"><br>
+    密码: <input type="password" id="upwd"><br>
+    <button onclick="login()">登录</button>
+    <div id="userinfo"></div>
+    <script>
+        function login() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            if (!_uname) {
+                userinfo.innerHTML = "用户名不能为空";
+                return;
+            }
+            if (!_upwd) {
+                userinfo.innerHTML = "密码不能为空";
+                return;
+            }
+            //1、创建异步对象
+            var xhr = new XMLHttpRequest();
+            //4、接收响应，打开监听
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    console.log(res, typeof res);
+                    userinfo.innerHTML = res == 1 ? `<span style="color:red">登录成功</span><br><a href="http://127.0.0.1:8081/04_list.html">查看列表</a>` : `<span style="color:red">用户名或密码错误</span><br><a href="./01_http_post_reg.html">用户注册</a>`
+                }
+            }
+            // 2、创建请求
+            xhr.open("post", "/ajax/login", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            // 3、发送请求
+            xhr.send(`uname=${_uname}&upwd=${_upwd}`);
+        }
+    </script>
+</body>
+
+</html>

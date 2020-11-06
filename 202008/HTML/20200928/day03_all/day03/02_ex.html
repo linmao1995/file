@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h4>h5新标签</h4>
+		<form action="">
+			<button>提交</button>
+			<h5>范围类型</h5>
+			<input type="range" name="range">
+			<h5>搜索类型</h5>
+			<input type="search" name="search">
+			<h5>邮箱</h5>
+			<input type="email" name="email">
+		</form>
+		<br>
+		<hr>
+		<br>
+		<h4>浮动框架</h4>
+		<iframe src="02_form.html" width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
+		<h4>控件分组</h4>
+		<form action="">
+			<fieldset>
+				<legend>基本信息</legend>
+				用户名称:<input type="text" name="uname"><br>
+				用户密码:<input type="text" name="upwd"><br>
+				密码验证:<input type="text" name="cpwd"><br>
+				用户邮箱:<input type="text" name="email"><br>
+			</fieldset>
+			<fieldset>
+				<legend>真实信息</legend>
+				真实姓名:<input type="text" name="user_name"><br>
+				家庭住址:<input type="text" name="addr"><br>
+				联系方式:<input type="text" name="phone"><br>
+			</fieldset>
+			
+			
+		</form>
+		<br>
+		<hr>
+		<br>
+		<h4>关联文本与控件</h4>
+		<input id="n1" type="radio" name="gender" value="1">
+		<label for="n1">男</label>
+		<input id="n2" type="radio" name="gender" value="0">
+		<label for="n2">女</label>
+		
+		
+		
+		<br>
+		<hr>
+		<br>
+		<header>
+			<h1>
+				<img src="jd_logo.png" alt="">
+				欢迎登陆
+			</h1>
+		</header>
+		<section>
+			<form action="">
+				<table align="center" width="800" border="1" cellspacing="0">
+					<tr>
+						<td rowspan="8">
+							<img width="100%" src="login.png" alt="">
+						</td>
+						<td>用户名/邮箱:</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="uname"></td>
+					</tr>
+					<tr>
+						<td>密码：</td>
+					</tr>
+					<tr>
+						<td><input type="password" name="upwd"></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name="auto" value="1" checked>
+								自动登陆
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<button>登陆</button>
+							<input type="reset" value="重填">
+						</td>
+					</tr>
+					<tr>
+						<td>使用京东合作账号登陆</td>
+					</tr>
+					<tr>
+						<td align="right">
+							<input type="radio" name="pay" value="qq">
+							QQ
+							<input type="radio" name="pay" value="jd">
+							jd钱包
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right">
+							<img src="btn_register.JPG" alt="">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</section>
+		<footer align="center">
+			关于我们|联系我们|人才招聘|广告服务
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通用选择器 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 标签选择器 */
+        p {
+            color: purple;
+        }
+
+        /* ID选择器 */
+        #div1 {
+            color: purple;
+        }
+
+        /* 类选择器 */
+        .text-red {
+            color: yellowgreen;
+        }
+
+        .text-success {
+            color: green;
+        }
+
+        .bg-color {
+            background-color: silver;
+        }
+
+        .font-50 {
+            font-size: 50px;
+        }
+
+        /* 类选择器的变种 */
+        /* 分类选择器 */
+        div.text-success {
+            color: blue;
+        }
+
+        /* 同时引用这两个类的标签 */
+        .bg-color.font-50 {
+            border: 1px solid red;
+        }
+
+        /* 群组选择器 */
+        b,
+        .c1,
+        #d1 {
+            color: red;
+        }
+
+        /* 子代选择器 */
+        #content>span {
+            color: violet;
+        }
+
+        /* 后代选择器 */
+        #content p>span {
+            color: tomato;
+        }
+
+        /* 伪类选择器  匹配  */
+        a:link {
+            font-size: 10px;
+        }
+
+        a:visited {
+            font-size: 50px;
+        }
+
+        a:active {
+            color: yellowgreen;
+        }
+
+        a:hover {
+            font-size: 90px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3>基础选择器</h3>
+    <h4>通用选择器</h4>
+    <p>效率低，项目中使用较少</p>
+    <p id="div1">ID选择器</p>
+    <p class="text-red">类选择器</p>
+    <div class="text-success font-50">Lorem, ipsum dolor.</div>
+    <div class="bg-color font-50">Lorem ipsum dolor sit amet.</div>
+    <!-- <a href="#">a标签</a> -->
+    <br><br><br>
+    <div id="content">
+        <span>div下儿子span</span>
+        <p>
+            <span>div下儿子p的儿子span</span>
+        </p>
+    </div>
+    <br><br><br>
+    <!-- <a href="http://www.baidu.com">百度</a> -->
+    <a href="http://127.0.0.1:8081/user_register.html">百度</a>
+    <!-- 1、通用选择器 * 基本只在 CSS reset(样式重置)时使用-->
+    <!-- 2、元素选择器(标签选择器) 定义某种元素的公用样式 -->
+    <!-- 3、id选择器 -->
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    #content{
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .top-height{
+      height: 377px;
+      background-color: #e8e8e8;
+      margin-bottom: 10px;
+    }
+    .bottom-height{
+      height: 233px;
+      background-color: #e8e8e8;
+    }
+
+    #content div:nth-child(1){
+      flex: 0 0 60.9%;
+    }
+    #content div:nth-child(2){
+      flex: 0 0 38.1%;
+    }
+    #content div:nth-child(3){
+      flex: 0 0 37.7%;
+    }
+    #content div:nth-child(4){
+      flex: 0 0 19.8%;
+    }
+    #content div:nth-child(5){
+      flex: 0 0 19.8%;
+    }
+    #content div:nth-child(6){
+      flex: 0 0 19.8%;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div class="top-height"></div>
+    <div class="top-height"></div>
+    <div class="bottom-height"></div>
+    <div class="bottom-height"></div>
+    <div class="bottom-height"></div>
+    <div class="bottom-height"></div>
+  </div>
+</body>
+</html>

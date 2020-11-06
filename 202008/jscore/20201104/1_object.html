@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1、创建对象
+    var lilei = {
+      sname: "lilei",
+      sage: 20,
+      intr: function () {
+        console.log(this)
+        console.log(`I'm ${this.sname},I'm ${this.sage} years old`)
+      }
+    }
+    // 定义构造函数
+    function Student(sname, sage) {
+      this.sname = sname;
+      this.sage = sage;
+    }
+
+    // 构造函数公有方法定义
+    Student.prototype.intr = function () {
+      console.log(`我叫${this.sname},今年${this.sage}岁`)
+    }
+
+    var hmm = new Student("hanmeimei", 18);
+    // 调用父对象的方法
+    // hmm.intr();
+  </script>
+
+</body>
+
+</html>

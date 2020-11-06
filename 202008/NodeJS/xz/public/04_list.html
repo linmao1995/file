@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getlist() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var _res = xhr.responseText;
+                    var res = JSON.parse(_res);
+                    var str =
+                        `
+                            <table border="1px" bordercolor="black" cellspacing="0">
+                                <tr>
+                                    <th>用户ID</th>
+                                    <th>用户名称</th>
+                                    <th>用户密码</th>
+                                    <th>用户邮箱</th>
+                                    <th>联系电话</th>
+                                    <th>真实姓名</th>
+                                    <th>性别</th>
+                                    <th>操作</th>
+                                </tr>
+                            `;
+                    for (var key in res) {
+                        str += `<tr>
+                                <td>${res[key].uid}</td>
+                                <td>${res[key].uname}</td>
+                                <td>${res[key].upwd}</td>
+                                <td>${res[key].email}</td>
+                                <td>${res[key].phone}</td>
+                                <td>${res[key].user_name? res[key].user_name:""}</td>
+                                <td>${res[key].gender ? "男" : (res[key].gender === 0 ? "女" : "保密")}</td>
+                                <td>
+                                    <a href="./01_http_post_update.html">修改</a>
+                                    <a href="./01_http_get_delete.html">删除</a>
+                                </td>
+                            </tr>`;
+                    }
+                    str += `</table>`;
+                    list.innerHTML = str;
+                }
+            }
+            xhr.open("get", "/ajax/http_list", true);
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body onload="getlist()">
+    <h3>用户列表</h3>
+    <div id="list"></div>
+</body>
+
+</html>

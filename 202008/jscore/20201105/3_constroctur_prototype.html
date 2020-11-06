@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Student(sname, sage, sgender) {
+      this.sname = sname;
+      this.sage = sage;
+      this.sgender = sgender;
+    }
+    var father = {
+      money: 1000000,
+      house: "大别野"
+    }
+    // 在创建子对象之前更改构造函数原型对象
+    Student.prototype = father;
+    var hmm = new Student("韩梅梅", 20, 0);
+    var ll = new Student("李雷", 20, 1);
+    console.log(hmm);
+    console.log(ll)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				var stus=[
+					{uid:1001,uname:"吴彦祖",age:36},
+					{uid:1002,uname:"彭于晏",age:36},
+					{uid:1003,uname:"肖战",age:36}
+				];
+				// console.log(stus);
+				var d1=document.getElementById("msg");
+				//创建html表格结构字符串--------1 表头
+				var strHTML=`
+				<table border="1">
+					  <tr>
+						 <th>学号</th>
+						 <th>姓名</th>
+						 <th>年龄</th>
+						</tr>`;
+				//创建html表格结构字符串--------2 循环体
+				for(var i=0;i<stus.length;i++){
+					strHTML+=`
+						<tr>
+							<td>${stus[i].uid}</td>
+							<td>${stus[i].uname}</td>
+							<td>${stus[i].age}</td>
+						</tr>
+					`;
+				}
+				//创建html表格结构字符串--------3 表结尾
+				strHTML+=`</table>`;
+				console.log(strHTML);
+				d1.innerHTML=strHTML;
+				/*
+				d1.innerHTML=`
+					<table border="1">
+					  <tr>
+						 <th>学号</th>
+						 <th>姓名</th>
+						 <th>年龄</th>
+						</tr>
+						<tr>
+							<td>${stus[0].uid}</td>
+							<td>${stus[0].uname}</td>
+							<td>${stus[0].age}</td>
+						</tr>
+						<tr>
+							<td>${stus[1].uid}</td>
+							<td>${stus[1].uname}</td>
+							<td>${stus[1].age}</td>
+						</tr>
+						<tr>
+							<td>${stus[2].uid}</td>
+							<td>${stus[2].uname}</td>
+							<td>${stus[2].age}</td>
+						</tr>
+					</table>
+				`;
+				*/
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 点击，把数据按照表格方式显示 -->
+		<button onclick="show()">显示</button>
+		<div id="msg"></div>
+	</body>
+</html>

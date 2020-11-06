@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* *{color:red;} */
+			p{color: #800080;}
+			
+			#d1{color:goldenrod;}
+			.text-danger{color:red;}
+			.bg-warning{background-color: yellow;}
+			.font-36{font-size: 36px;}
+			div.text-danger{color:green;}
+			.text-danger.bg-warning{border:1px solid #f00;}
+			.c1.c2{color: blue;}
+			#content>p span{background-color: #FFFF00;}
+			a:link{background-color: yellow;}
+			a:visited{background-color: #7FFFD4;}
+			a:active{color: yellow;background-color: #FF0000;}
+			a:hover{font-size: 36px;color: #00FFFF;background-color: blanchedalmond;}
+			.c1:active{width: 256px;height: 50px;}
+			.c2:focus{width: 256px;height: 50px;}
+			input:focus{background-color: yellow;}
+			#d1>.c2 .c3{color:green;}/*100+10+1=111*/
+			.c1 .c2 #d3{color:red;}/*120*/
+			#d1,#d2,.c1,.c3,p,span{color:yellow}
+			div>div>div>div>div>div>div>div>div>div>div{color:red;}
+			.ccc{color:purple;font-size: 50;}/*10*/
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div class="ccc">dddd</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<h4>选择器的权值</h4>
+		<div id="d1" class="c1">
+			<p id="d2" class="c2">
+				<span id="d3" class="c3">Lorem ipsum dolor sit amet.</span>
+			</p>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<input type="submit">
+		<br>
+		<img src="05.png" class="c1">
+		<img src="06.png" class="c1">
+		<img src="07.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<img src="08.png" class="c2">
+		<h4>伪类选择器</h4>
+		<a href="http://www.baidu.com">新浪</a>
+		<br>
+		<hr>
+		<br>
+		<h4>子代选择器，后台选择器</h4>
+		<div id="content">
+			<span>我是content的儿子span</span>
+			<p>
+				<span>我是content的儿子p的儿子span</span>
+			</p>
+		</div>
+		<br>
+		<hr>
+		<br>
+		
+		<h4>类选择器</h4>
+		<div class="text-danger bg-warning font-36">Lorem ipsum dolor sit amet.</div>
+		<p class="text-danger bg-warning">Lorem ipsum dolor sit amet.</p>
+		<span class="font-36 text-danger c1 c2">Lorem ipsum dolor sit amet.</span>
+		<hr>
+		<br>
+		<hr>
+		<h4>id选择器</h4>
+		<div id="d1">Lorem ipsum dolor sit amet.</div>
+		<br>
+		<hr>
+		<br>
+		<h4>通用选择器</h4>
+		<p>通用选择器由于效率极低，项目中使用较少</p>
+	</body>
+</html>

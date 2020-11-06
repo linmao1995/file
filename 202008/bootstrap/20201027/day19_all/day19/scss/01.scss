@@ -1,0 +1,248 @@
+//指令
+$s:95;
+div{
+	@if($s>90){ content:"大G"; }
+	@else if($s>80){ content:"GTR"; }
+	@else if($s>70){ content:"霸道"; }
+	@else if($s>60){ content:"CC";}
+	@else{ content:"断绝父子关系"; }
+}
+
+
+
+//自定义函数
+@function add($a,$b){
+  @return $a+$b;
+}
+div{
+	width: add(100,200)+px;
+}
+
+
+//数学函数
+p{
+	content:quote(abc);
+	width: round(4.2px);
+	height: ceil(4.1px);
+	border-width: random();
+}
+
+
+//颜色的运算
+#d1{
+	background: #cc11aa+#bb33aa;
+	border-color: rgb(01,22,33)+rgb(02,44,55);
+	color:rgba(11,22,33,0.5)+rgba(22,33,44,0.5);
+}
+
+//插值运算
+$num:30;
+div{
+	content:"liangliang ate #{$num+40}  jianpings,no pay!!!";
+}
+
+//除法
+#d1{
+	font-size: 10px/5px;
+	$mywidth:100px;
+	width: $mywidth/2;
+	height: (500px/2px)+px;
+	margin: 5px+8px/2px;
+	
+}
+
+//减法
+$my-width:100px;
+$my-size:300px;
+
+p{
+	width: $my-size - $my-width;
+}
+
+
+//字符串拼接
+p{
+	content:"肉夹馍"+馍馍馍;
+	font-family: joker+"man";
+}
+
+
+//继承
+#d{
+	border:0;
+}
+#c{
+	width: 100px;height: 100px;
+	@extend #d;
+}
+
+
+
+//使用混合器完成渐变
+@mixin my_bg($dri,$c1,$p1,$c2,$p2) {
+	background: -webkit-linear-gradient($dri,$c1  $p1,$c2 $p2);
+	background: -moz-linear-gradient($dri,$c1  $p1,$c2 $p2);
+	background: -o-linear-gradient($dri,$c1  $p1,$c2 $p2);
+	background: -ms-linear-gradient($dri,$c1  $p1,$c2 $p2);
+}
+#d1{
+	@include my_bg(top,#111,10%,#fff000,90%);
+}
+#d1{
+	@include my_bg(right,#000,0%,#fff,100%);
+}
+
+
+
+
+//复习混合器
+@mixin my_border($my_width,$my_style,$my_color) {
+	border:$my_width $my_style $my_color;
+	outline: 0;
+	box-shadow: 0px 0px 0px 0px #000;
+}
+div{
+	@include my_border(10px,dotted,#ff0);
+}
+#d1{
+	width: 100px;height: 100px;
+	background-color: #fff;
+	@include  my_border(10px,double,#0ff);
+}
+
+
+
+
+
+//带参数的混合器，在项目中做常用的方式
+@mixin my_bg($dir,$c1,$c2,$p1,$p2) {
+	 background: -webkit-linear-gradient($dir,$c1 $p1,$c2 $p2);
+	 background: -moz-linear-gradient($dir,$c1 $p1,$c2 $p2);
+	 background: -ms-linear-gradient($dir,$c1 $p1,$c2 $p2);
+	 background: -o-linear-gradient($dir,$c1 $p1,$c2 $p2);
+}
+#d1{
+	width: 100px;
+	@include my_bg(bottom,#111,#222,0%,100%);
+}
+#d2{
+	@include my_bg(right,#aaa,#bbb,10%,50%);
+}
+
+
+
+
+
+//混合器
+
+
+
+
+
+@mixin my_border1($mycolor,$mywidth) {
+	border:$mywidth solid $mycolor;
+	outline: 0;
+	border-radius: $mywidth;
+	box-shadow: 0px 0px 10px 10px $mycolor;
+}
+div{
+	@include my_border1(#111,20px);
+}
+
+
+@mixin my_border {
+	border:1px solid #f00;
+	outline: 0;
+	border-radius: 0.25rem;
+	box-shadow: 0px 0px 10px 10px #fff;
+}
+.c1{
+	@include my_border;
+}
+h1{
+	@include my_border;
+}
+p{
+	width: 100px;height: 100px;
+	@include my_border;
+}
+
+
+//导入  _123.scss
+@import "123";
+@import "02";
+div{width: $d2_width;}
+
+//练习
+$mybule:#0aa1ed;
+$mywidth:130px;
+$fontcolor:#fff;
+$myheight:40px;
+$my_color:red;
+#btn{
+	width: $mywidth;height: $myheight;
+	background-color: $mybule;
+	border-radius: 0.25rem;
+	color:$fontcolor;
+	font-size: 16px;
+	text-align: center;
+	line-height: $myheight;
+	&:hover{color:$my_color;}
+}
+
+
+
+
+//嵌套
+div{
+	border:{width:1px;color:#111;style:solid}
+}
+
+
+
+a{
+	color:red;
+	&:hover{color:#111;}
+}
+
+
+
+
+#content,p,.c1{
+	a{
+		color:#111;
+	}
+}
+
+
+
+#content{
+	color:red;
+	div{color:red;
+		p{color:red;
+			span{color:red;}
+		}
+		a{color:red;}
+	}
+	p{
+		color:red;
+		a{color:red;}
+	}
+}
+
+
+//变量
+$my_width:100px;
+$my_bg:#aaa;
+$my_style:dotted;
+$my_border:$my_width $my_style $my_bg;
+#d1{
+	$your:200px;
+	border:$my_width $my_style $my_bg;
+	width: $your;
+	background: $my_bg;
+}
+#d2{
+	height: $my_width;
+	border:$my_border ;
+}

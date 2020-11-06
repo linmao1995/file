@@ -1,0 +1,19 @@
+$myblue:#00a1ed;
+$mywidth:130px;
+$fontcolor:#fff;
+$myheight:40px;
+$my_color:red;
+
+a{
+  display: block;
+  width: $mywidth;
+  height: $myheight;
+  background-color: $myblue;
+  color: $fontcolor;
+  text-decoration: none;
+  text-align: center;
+  line-height: $myheight;
+  &:hover{
+    color: $my_color;
+  }
+}

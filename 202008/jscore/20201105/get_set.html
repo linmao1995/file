@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";//ES5 严格模式
+    var emp = {
+      eid: 1001,
+      salary: 10000,
+      ename: "张三",
+      _age: 18
+    }
+
+    Object.defineProperties(emp, {
+      _age: {
+        enumerable: false, //设置不可遍历
+        configurable: false,
+      },
+      age: {
+        get: function () {
+          console.log(`调用get()`)
+          return this._age;
+        },
+        set: function (newValue) {
+          if (newValue >= 16 && newValue <= 60) {
+            console.log(`调用set()`)
+            this._age = newValue;
+          } else {
+            throw Error(`数据不合法`)
+          }
+        },
+        enumerable: true,
+        configurable: false,
+      }
+
+    })
+    // emp.age = 20;
+    console.log(emp)
+  </script>
+</body>
+
+</html>

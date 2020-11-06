@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="animate.css">
+  <style>
+    /* 定义动画 */
+    @keyframes change {
+      0% {
+        background: #ff0000;
+        border-radius: 0%
+      }
+
+      25% {
+        background: #ffff00;
+        border-radius: 50%
+      }
+
+      50% {
+        background: #00ffff;
+        border-radius: 0%
+      }
+
+      75% {
+        background: #0000ff;
+        border-radius: 50%
+      }
+
+      100% {
+        background: #00ff00;
+        border-radius: 0%
+      }
+    }
+
+    @keyframes jump {}
+
+    #d1 {
+      width: 100px;
+      height: 100px;
+      animation-name: change;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-delay: 1s;
+      /* 设置动画执行次数 */
+      animation-iteration-count: infinite;
+      /*normal:0-100%*/
+      animation-direction: alternate;
+      /* 动画简写方式 */
+      /* animation: change 3s ease 1s infinite alternate; */
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* animation: name duration; 最简 */
+      /* 动画的填充模式 */
+      /* backwards：在动画延迟时间内，填充动画第一帧 */
+      /* forwards：在动画结束后，填充动画最后一帧 */
+      animation-fill-mode: both;
+    }
+    #d1:hover{
+      animation: change 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="d1"></div>
+</body>
+
+</html>

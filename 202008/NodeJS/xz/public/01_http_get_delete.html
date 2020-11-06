@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户删除</title>
+</head>
+
+<body>
+    用户UID: <input type="text" id="uid" placeholder="请输入用户UID"><br>
+    <button onclick="deleteuser()">提交</button>
+    <div id="result"></div>
+    <script>
+        function deleteuser() {
+            var _uid = uid.value;
+            //1、创建异步对象
+            var xhr = new XMLHttpRequest();
+            //4、接收响应
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var _res = xhr.responseText;
+                    result.innerHTML = _res == 1 ? "删除成功" : "删除失败";
+                }
+            }
+            //2、创建请求
+            xhr.open("get", "/ajax/delete?uid=" + _uid, true);
+            // 3、发送请求
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

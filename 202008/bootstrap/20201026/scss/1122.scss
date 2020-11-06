@@ -1,0 +1,44 @@
+@import "123";
+@import "234";
+$h:100px;
+$w:100px;
+
+@mixin my-div($w_, $h_) {
+  width: $w_;
+  height: $h_;
+  text-align: center;
+  line-height: $h;
+  background-color: #f0f0f0;
+  font-size: 10px;
+}
+
+// 线性渐变
+@mixin div_t($b, $c1, $p1, $c2, $p2, $c3, $p3) {
+  background: -webkit-linear-gradient($b, $c1 $p1, $c2 $p2, $c3 $p3);
+  background: -ms-linear-gradient($b, $c1 $p1, $c2 $p2, $c3 $p3);
+  background: -moz-linear-gradient($b, $c1 $p1, $c2 $p2, $c3 $p3);
+  background: -o-linear-gradient($b, $c1 $p1, $c2 $p2, $c3 $p3);
+}
+
+@mixin my_bg($dir, $c1, $c2, $p1, $p2) {
+  background: -webkit-linear-gradient($dir, $c1 $p1, $c2 $p2);
+  background: -moz-linear-gradient($dir, $c1 $p1, $c2 $p2);
+  background: -o-linear-gradient($dir, $c1 $p1, $c2 $p2);
+  background: -ms-linear-gradient($dir, $c1 $p1, $c2 $p2);
+}
+
+#d1 {
+  width: 100px;
+  height: 100px;
+  @include my_bg(bottom, #111, #999999, 0%, 100%);
+}
+
+#d2 {
+  @include my_bg(right, #aaa, #bbb, 10%, 50%);
+}
+
+div {
+  border-radius: 3px;
+  @include my-div($w, $h);
+  @include div_t(bottom, #000, 0%, #0f0, 50%, #00f, 100%)
+}

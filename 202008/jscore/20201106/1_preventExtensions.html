@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+    // 保护对象结构
+
+    var stu = {
+      sid:1001,
+      sname:"张三",
+      sage:18
+    }
+    // 1、防扩展，只能防止添加属性，不能防止删除对象属性。
+    // Object.preventExtensions(stu);
+    // stu.Sid = 1002;//报错，
+
+    // 2、密封对象   禁止删除对象所有属性。object.seal()
+    
+    // 3、
+    console.log(stu)
+  </script>
+</body>
+
+</html>

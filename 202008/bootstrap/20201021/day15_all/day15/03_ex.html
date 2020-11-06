@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;box-sizing: border-box;}
+			div{border:2px solid #000}
+			ul{list-style: none;}
+			ul>li{border:3px solid purple;}
+			#content>div div{border:0;}
+			#content{display: flex;flex-wrap: wrap;}
+			#content>div:nth-child(2)>div{display: flex;flex-wrap: wrap;}
+			img{width: 100%;}
+			@media (min-width:576px) {
+				#content>div:nth-child(1){flex:0 0 100%;}
+				#content>div:nth-child(2){flex:0 0 100%;}
+				#content>div:nth-child(3){flex:0 0 100%;}
+				#content>div:nth-child(2)>div>div{flex:0 0 50%;padding:5px;}
+			}
+			@media (min-width:768px) {
+				#content>div:nth-child(1){flex:0 0 30%;}
+				#content>div:nth-child(2){flex:0 0 70%;}
+				#content>div:nth-child(3){display: none;}
+				#content>div:nth-child(2)>div>div{flex:0 0 25%;padding:5px;}
+			}
+			@media (min-width:992px) {
+				#content>div:nth-child(1){flex:0 0 20%;}
+				#content>div:nth-child(2){flex:0 0 60%;}
+				#content>div:nth-child(3){flex:0 0 20%;display: block;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div>
+				<ul>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+					<li><a href="#">豆蔻年华</a></li>
+				</ul>
+			</div>
+			<div>
+				<div>
+					<div><img src="2.jpg" alt=""></div>
+					<div><img src="2.jpg" alt=""></div>
+					<div><img src="2.jpg" alt=""></div>
+					<div><img src="2.jpg" alt=""></div>
+				</div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptatem quis voluptas dolore optio praesentium vero magnam animi omnis earum suscipit nobis repellendus odio blanditiis modi assumenda voluptates culpa repudiandae!
+			</div>
+			<div>
+				右侧广告 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi pariatur voluptatum hic dolor dolores possimus distinctio tempora non maxime praesentium ab voluptates corrupti sequi. Dolores quis ex nobis numquam natus.
+			</div>
+		</div>
+	</body>
+</html>

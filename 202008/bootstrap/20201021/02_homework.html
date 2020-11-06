@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #content {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #content>div:nth-child(1) {
+      flex: 0 0 100%;
+      background-color: #333333;
+    }
+
+    #content>div:nth-child(1)>ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 42px;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 20px 20px;
+      color: #9d9d9d;
+      font-size: 12px;
+    }
+
+    #content>div:nth-child(1)>ul>li:nth-child(1)>a {
+      font-size: 18px;
+    }
+
+    #content>div:nth-child(2) {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 550px;
+      background-image: linear-gradient(to right, #100736, #55274B);
+    }
+
+    #content>div:nth-child(2)>p.title {
+      font-size: 100px;
+      color: #ffffff;
+      align-self: center;
+      margin-bottom: 10px;
+    }
+
+    #content>div:nth-child(2)>p.desc {
+      font-size: 30px;
+      color: #9F9BA2;
+      align-self: center;
+    }
+
+    #a1 {
+      border-radius: 4px;
+      padding: 10px 10px;
+      background-color: #0aa1ed;
+      color: #ffffff;
+      align-self: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #a2 {
+      align-self: center;
+      font-size: 18px;
+    }
+
+    #content>div:nth-child(3) {
+      flex: 0 0 100%;
+      display: flex;
+    }
+
+    #content>div:nth-child(3)>div {
+      flex: 0 0 25%;
+    }
+
+    #content>div:nth-child(3)>div>img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>
+      <ul>
+        <li><a href="#">Bootstrap中文网</a></li>
+        <li><a href="#">起步</a></li>
+        <li><a href="#">全局CSS样式</a></li>
+        <li><a href="#">组件</a></li>
+        <li><a href="#">JavaScript插件</a></li>
+        <li><a href="#">定制</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="title">Bootstrap</p>
+      <p class="desc">简洁、直观、强悍的前端开发框架，让Web开发更迅速、简单</p>
+      <a href="#" id="a1">Bootstrap3中文文档(v3.3.7)</a>
+      <a href="#" id="a2">Bootstrap3中文文档(v3.3.7)</a>
+    </div>
+    <div>
+      <div><img src="boot-1.png" alt=""></div>
+      <div><img src="boot-2.png" alt=""></div>
+      <div><img src="boot-3.png" alt=""></div>
+      <div><img src="boot-4.png" alt=""></div>
+    </div>
+  </div>
+</body>
+
+</html>

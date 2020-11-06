@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Student(sname, sage) {
+      this.sname = sname;
+      this.sage = sage;
+    }
+    Student.prototype.intr = function () {
+      console.log(`我是${this.sname},今年${this.sage}`)
+    }
+    //通过Student创建
+    // 共有属性，只能通过 构造函数.prototype.共有属性 修改
+    Student.prototype.address = "实验小学2年级2班";
+
+    var lilei = new Student("李雷", 20);
+    var hmm = new Student("韩梅梅", 18);
+    // 自有属性，仅保存在当前子对象内，仅归当前子对象独有的属性。
+
+    // 子对象调用自有属性 hmm.sname
+    console.log(hmm.sname)
+    // 子对象只能调用原型对象中的属性，不能修改原型对象中的属性。强行调用子对象没有的属性名，会在子对象中创建这个属性。
+    console.log(hmm.address)
+    console.log(lilei.address)
+  </script>
+</body>
+
+</html>

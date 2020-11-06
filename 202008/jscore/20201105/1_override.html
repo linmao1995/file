@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 构造函数
+    function Student(sname, sage, sgender) {
+      this.sname = sname;
+      this.sage = sage;
+      this.sgender = sgender;
+    }
+    // 给原型对象添加toString()方法
+    Student.prototype.toString = function () {
+      console.log("重写的toString()")
+      //在方法中调用当前对象的属性需要添加this.
+      return `{sname:"${this.sname}",sage:${this.sage},sgender:${this.sgender}}`;
+    }
+    //创建子对象
+    var lilei = new Student("李雷", 20, 1);
+    console.log(lilei)
+    // 调用原型对象的toString()方法
+    console.log(lilei.toString())
+    var hmm = new Student("韩梅梅", 18, 0);
+    console.log(hmm)
+    // 调用原型对象的toString()
+    console.log(hmm.toString());;
+  </script>
+</body>
+
+</html>

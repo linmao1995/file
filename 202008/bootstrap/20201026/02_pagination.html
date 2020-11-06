@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    .container {
+      background-color: #e8e8e8;
+    }
+
+    .page-link:hover {
+      border-color: #0aa1ed;
+      background-color: transparent;
+    }
+
+    .page-link {
+      border-radius: 0.25rem;
+      background-color: transparent;
+    }
+
+    .page-item+.page-item {
+      margin-left: 0.5rem;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: "|";
+    }
+
+    .font_color {
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container bg-light">
+    <h3>进度条</h3>
+    <div class="progress">
+      <div class="progress-bar w-25 bg-success progress-bar-striped progress-bar-animated"></div>
+    </div>
+    <br><br><br>
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#"><img src="care.png"></a></li>
+      <li class="breadcrumb-item"><a href="#"><img src="order.png"></a></li>
+      <li class="breadcrumb-item"><a href="#"><img src="shop_car.png"></a></li>
+      <li class="breadcrumb-item"><a class="font_color" href="#">注册</a></li>
+      <li class="breadcrumb-item"><a class="font_color" href="#">登录</a></li>
+    </ul>
+    <br><br>
+    <h3>面包屑导航</h3>
+    <ul class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="#">首页</a></li>
+      <li class="breadcrumb-item"><a href="#">日常</a></li>
+      <li class="breadcrumb-item"><a href="#">学习</a></li>
+      <li class="breadcrumb-item"><a href="#">电脑</a></li>
+      <li class="breadcrumb-item"><a href="#">IBM</a></li>
+    </ul>
+    <br><br><br>
+    <!-- 分页 -->
+    <ul class="pagination">
+      <!-- page-item 第一个和最后一个li中a标签添加圆角 -->
+      <li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">7</a></li>
+      <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

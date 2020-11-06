@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="msg"><button id="btn">提交</button>
+  <script>
+    btn.onclick = function () {
+      // 用户输入
+      // var msg = prompt("请输入内容");
+      var msg = document.getElementById("msg").value;
+      //返回一个数组，返回查找敏感词出现的 内容 和 下标 ，
+      // var index = msg.indexOf("我草");
+      // var index = msg.search(/([我卧|wo])\s*([草槽艹|cao])/i)
+      var arr = msg.match(/小[\u4e00-\u9fa5]/ig);// g 查找所有
+      // arr==null ===>未找到 !=null ==>arr[0]:敏感词内容，arr["index"]:敏感词位置
+      if (arr != null) {
+        // document.write(`<h4 style="color:red">在位置:${arr["index"]}处发现敏感词：${arr["0"]},禁止发送</h4>`)
+
+        //简写
+        console.log(arr)
+        document.write(`<h4 style="color:red">共找到敏感词${arr.length}处,禁止发送</h4>`)
+      } else {
+        document.write(`<h4 style="color:green">然哥说:${msg}</h4>`)
+      }
+    }
+  </script>
+</body>
+
+</html>

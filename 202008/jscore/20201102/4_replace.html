@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str = "Lorem ipsum dolor,sit amet consectetur,adipisicing elit Libero nihil dicta, quisquam doloribus,incidunt laborum officiis,at architecto error velit"
+    // var result = str.replace(/\s+\b[a-z]/ig, function (key) {
+    //   return key.toUpperCase();
+    // })
+    var r = "";
+    var _r = str.split(",")
+    console.log(_r[0].replace(/\b[a-z]/))
+    console.log(_r[1].replace(/\b[a-z]/))
+    // for(var i=0;i<=_r.length-1;i++){
+    //   r+=_r[i].replace(/\b[a-z]/i,function(key){
+    //     console.log(`关键词:${key}`)
+    //     return key.toUpperCase();
+    //   })
+    // }
+    console.log(_r)
+  </script>
+</body>
+
+</html>

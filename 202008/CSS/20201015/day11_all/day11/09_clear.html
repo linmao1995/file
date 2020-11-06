@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#parent{border:3px solid #000;}
+			#d1,#d2,#d3{width: 200px;height: 200px;float: left;}
+			#d1{background:#ff0;}
+			#d2{background:#0ff;}
+			#d3{background:#f0f;}
+			/* #d4{clear:both;} */
+			#parent::after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="d1"></div>
+			<div id="d2"></div>
+			<div id="d3"></div>
+			<div id="d4"></div>
+		</div>
+	</body>
+</html>

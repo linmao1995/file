@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 200px;height: 200px;
+				/* 简写方式 */
+				/* border:5px double #f00; */
+				/* 单边的定义 */
+				border-top: 5px solid #f00;
+				border-right:5px dotted #00f;
+				border-bottom: 10px dashed   #f0f;
+				border-left: 3px double #36d;
+				/* border-bottom:0; */
+				/* 单属性的定义 */
+				border-width: 10px;
+				border-style: double;
+				border-color: #0ff;
+				/* 单边单属性的定义 */
+				border-right-style: dashed;
+				border-top-color: #aaf;
+				
+			}
+			/* #d1{
+				border:0;
+			} */
+			#d2{
+				width: 0;
+			/* 	border-top:20px solid #aaf;
+				border-right:20px solid transparent;
+				border-bottom:20px solid transparent;
+				border-left:20px solid transparent; */
+				border:20px solid transparent;
+				border-top-color: #999;
+			}
+			#d3{
+				width: 200px;height: 200px;
+				background-color: #AAAAFF;
+				/* 圆角 */
+				/* border-radius: 50%; */
+				border-top-right-radius: 50px;
+				border-top-left-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-bottom-left-radius: 50px;
+			}
+			#d4{
+				width: 200px;height: 200px;
+				border:5px solid orange;
+				background-color: #ff0;
+				border-top-right-radius: 18px;
+				border-top-left-radius: 146px;
+				border-bottom-left-radius: 22px;
+				border-bottom-right-radius: 146px;
+				/* 元素阴影 */
+				box-shadow: 100px 100px;
+			}
+			#d5{
+				width: 200px;height: 200px;
+				background-color: #000;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				box-shadow: 0px 0px 0px 0px #000;
+			}
+			#d6{
+				width: 200px;height: 200px;
+				border-radius: 50%;
+				box-shadow: 0px 0px 0px 0px #000 inset;
+			}
+			input,button{
+				border:5px solid #f00;
+				/* outline: 5px solid #afa; */
+				outline: 0;
+			}
+			body{background-color: #000;}
+			#d7{
+				width: 200px;height: 200px;
+				background-color: #fff;
+				border-radius: 50%;
+				box-shadow: 0px 99px 0px 0px #f00 inset;
+			}
+			#d8{
+				width: 20px;height: 80px;
+				background-color: #fff;
+				margin-left: 90px;
+				margin-top: -2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d7"></div>
+		<div id="d8"></div>
+		<br>
+		<hr>
+		<br>
+		<input type="text">
+		 <button>提交</button>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		<div id="d6"></div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="d5"></div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<div id="d4"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>圆角</h4>
+		<div id="d3"></div>
+		<br>
+		<hr>
+		<br>
+		<div id="d2"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>边框</h4>
+		<div id="d1"></div>
+	</body>
+</html>

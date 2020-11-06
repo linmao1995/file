@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      
+    }
+    div{
+      border: 1px solid black;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul>li {
+      border: 1px solid #00ff00;
+    }
+
+    #content>div:nth-child(1) {
+      flex: 0 0 20%;
+    }
+
+    #content>div:nth-child(2) {
+      flex: 0 0 60%;
+    }
+
+    #content>div:nth-child(3) {
+      flex: 0 0 20%;
+    }
+
+    #content>div:nth-child(2)>div {
+      display: flex;
+      border: 0;
+    }
+
+    #content>div:nth-child(2)>div>div {
+      flex: 0 0 25%;
+      border: 0;
+    }
+    #content>div:nth-child(2)>div>div>img{
+      width: 100%;
+      padding: 5px;
+    }
+    /* 媒体查询 */
+    @media (min-width: 576px){
+      #content>div:nth-child(1){
+        flex: 0 0 100%;
+      }
+      #content>div:nth-child(2){
+        flex: 0 0 100%;
+      }
+      #content>div:nth-child(2)>div{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #content>div:nth-child(2)>div>div{
+        flex: 0 0 50%;
+      }
+      #content>div:nth-child(2)>div>div>img{
+        width: 100%;
+        padding: 5px;
+      }
+      #content>div:nth-child(3){
+        flex: 0 0 100%;
+      }
+    }
+    @media (min-width: 768px){
+      #content>div:nth-child(1){
+        flex: 0 0 25%;
+      }
+      #content>div:nth-child(2){
+        flex: 0 0 75%;
+      }
+      #content>div:nth-child(3){
+        display: none;
+      }
+    }
+    @media (min-width: 992px){
+      #content>div:nth-child(1){
+        flex: 0 0 20%;
+      }
+      #content>div:nth-child(2){
+        flex: 0 0 60%;
+      }
+      #content>div:nth-child(3){
+        flex: 0 0 20%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>
+      <ul>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+      </ul>
+    </div>
+    <div>
+      <div>
+        <div><img src="1.jpg" alt=""></div>
+        <div><img src="2.jpg" alt=""></div>
+        <div><img src="3.jpg" alt=""></div>
+        <div><img src="4.jpg" alt=""></div>
+      </div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error deleniti nulla, assumenda cupiditate culpa
+        laboriosam officia possimus debitis perspiciatis rerum consequatur voluptatum laborum ad esse nam sed hic aut,
+        nemo consequuntur distinctio nobis adipisci amet commodi doloribus. Eius at ea accusamus unde error id,
+        asperiores, omnis, rem adipisci quod recusandae.
+    </div>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur a facere odio corrupti doloremque magnam
+      repellendus voluptates enim pariatur? Quidem iusto, architecto, reprehenderit ex nulla minus, nisi dolorem harum
+      magnam nemo nihil vero nostrum. Quibusdam ducimus hic dolorem, commodi voluptatum dolor molestias adipisci
+      laudantium voluptas quo sequi voluptatibus, aperiam quae.</div>
+  </div>
+</body>
+
+</html>

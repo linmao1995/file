@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //高频鄙视题: 将每个单词首字母转为大写: 
+    var str="you can you up";
+    str=str.replace(
+      /\b[a-z]/ig, 
+      //回调函数: 我们自己定义的，但是我们自己不调用，而是交给另一个函数，去自动反复调用。
+      function(word){
+        console.log(`自动调用了一次回调函数，形参word自动收到${word}，返回了${word.toUpperCase()}`);
+        return word.toUpperCase();
+      }
+    )
+    console.log(str); //You Can You Up
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#a1{
+				width: 100px;height: 100px;
+				background-color: #ff0;
+				display: block;/*让a变成块级*/
+				margin-top: 0px;
+			}
+			#a2{
+				width: 100px;height: 100px;
+				background:#0ff;
+				display: inline-block;/*让a变成行内块*/
+				margin-top: 0px;
+			}
+			#a3{
+				width: 100px;height: 100px;
+				background:#faf;
+				display: table;/*让a变成表格*/
+			}
+			#d1{
+				width: 100px;height: 100px;
+				background-color: #afa;
+				display: none;
+			}
+			#d2{
+				width: 100px;height: 100px;
+				background-color: #aaf;
+				visibility: hidden;
+			}
+			#d3{
+				width: 200px;height: 200px;
+				background: #f00;
+				color:#00f;
+				opacity: .5;
+			}
+			#d4{
+				width: 100px;height: 100px;
+				background:#0f0 url(study_computer_img1.png);
+				background-size: 100%;
+			}
+			ul{
+				list-style-type: disc;
+				list-style-image: url(sinablog.png);
+				list-style-position: inside;
+			}
+			#n1{
+				width: 100px;height: 100px;
+				vertical-align: top;
+			}
+			img{vertical-align: bottom;}
+			#d5{
+				width: 800px;
+				border: 2px solid #00f;
+			}
+			#d5>img{width: 25%;}
+			#d5:hover{cursor: crosshair;}
+		</style>
+	</head>
+	<body>
+		<div id="d5">
+			<img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt="">
+		</div>
+		<h4>vertical</h4>
+		ajajajaj
+		<img src="1.jpg">
+		<span>ygygis</span>
+		<br>
+		<hr>
+		<br>
+		fsdfdsfsd
+		<input type="text" id="n1">
+		<input type="text">
+		<hr>
+		<hr>
+		<br>
+		<h4>列表样式</h4>
+		<ul>
+			<li>羊肉泡馍</li>
+			<li>刀削面</li>
+			<li>水煮鱼</li>
+			<li>钵钵鸡</li>
+			<li>麻辣烫</li>
+			<li>烤羊腿</li>
+		</ul>
+		<br>
+		<hr>
+		<br>
+		<h4>透明度</h4>
+		<div id="d3">
+			我是父元素的文本
+			<div id="d4">我是子元素的文本</div>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<h4>显示效果</h4>
+		<div id="d2"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>display显示方式</h4>
+		<div id="d1">23</div>
+		<a id="a3" href="#">表格1111111111111111111111111111111111111111</a>
+		<a id="a2" href="#">行内块</a>
+		<span>ssssss</span>
+		<a id="a1" href="#">块级111111111111111111111111111111</a>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //将所有的敏感词都放在一个数组中集中管理
+    var arr=["明月","青天","紫烟"];
+    //希望生成: 明月|青天|紫烟
+    var str=arr.join("|");
+    console.log(str);
+
+
+    //希望数组中有什么敏感词，程序就要防住什么敏感词
+    //其实: 将数组的内容，动态生成为正则表达式
+    var input=prompt("请用户输入消息内容");
+    //用正则查找input中是否包含符合要求的敏感词
+    //错误:
+    //         js地盘← |正则|→js地盘
+    // var i=input.search(/str/);
+    //正确: 
+    var i=input.search(new RegExp(str));
+    //                           变量不能加""
+    //如果找到敏感词
+		if(i!=-1){
+			//就提示，包含敏感词，禁止发送
+			document.write(`<h3 style="color:red">包含敏感词,禁止发送</h3>`);
+		}else{//否则没找到敏感词
+			//就提示，"然哥说: 消息内容"
+			document.write(`<h3 style="color:green">然哥说：${input}</h3>`)
+		}
+    
+  </script>
+</body>
+</html>

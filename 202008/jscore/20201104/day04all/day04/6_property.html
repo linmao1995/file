@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Student(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+    }
+    Student.prototype.className="初一2班";
+    //2. 反复创建2个学生对象
+    var lilei=new Student("Li Lei", 11);
+    var hmm=new Student("Han Meimei", 12);
+    //初一: 
+    console.log(lilei.className,hmm.className);
+    //升初二： 
+    //错误
+    //lilei.className="初二2班";
+    //正确: 
+    Student.prototype.className="初二2班";
+    console.log(lilei.className,hmm.className);
+    console.log(lilei);
+    console.log(hmm);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //去掉字符串开头和结尾的空字符
+    //定义3个函数
+    //1. 只去掉开头的空字符
+    function trimLeft(str){
+      return str.replace(/^\s+/,"");
+    }
+    //2. 只去掉结尾的空字符
+    function trimRight(str){
+      return str.replace(/\s+$/,"");
+    }
+    //3. 同时去掉开头和结尾的空字符
+    function trim(str){
+      return str.replace(/^\s+|\s+$/g,"");
+    }
+    //测试: 
+    var str="     zhang     dong     ";
+    console.log(trimLeft(str));
+    //"zhang     dong     "
+    console.log(trimRight(str));
+    //"     zhang     dong"
+    console.log(trim(str));
+    //"zhang     dong"
+
+    //ES5、6
+    // var str="    zhang    dong    ";
+    // console.log(str.trimLeft());
+    // console.log(str.trimRight());
+    // console.log(str.trim())
+  </script>
+</body>
+</html>

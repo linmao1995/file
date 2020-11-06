@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    .f_size {
+      font-size: 0.7rem;
+    }
+
+    .p_size {
+      font-size: 2rem;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    // var _num = num.value;
+    console.log($("#num"))
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState==4 && xhr.status==200){
+        var _res = xhr.responseText;
+      }
+    }
+    xhr.open("get","http://127.0.0.1",true);
+    xhr.setRequestHeader("Content-Type","application/x-www-for-urlencoded")
+    xhr.send();
+  </script>
+</head>
+
+<body>
+  <div class="container p-0">
+    <div class="row no-gutters">
+      <div class="col-12">
+        <p class="m-0">华硕(ASUS)13.3英寸RX310UQ金属超极本 学生 商务手提轻薄便携超薄笔记本电脑 玫瑰金 13.3英寸I3-7100U/4G/128G固态</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-12">
+        <p class="m-0 f_size font-weight-bold">【铝镁合金 纯固态 轻至1.45kg 金属超极本 】双尺寸可选</p>
+      </div>
+    </div>
+    <div class="row no-gutters bg-light">
+      <div class="col-12">
+        <div class="row no-gutters mt-2">
+          <div class="col-2">
+            <p class="m-0">学员售价：</p>
+          </div>
+          <div class="col-10 text-primary font-weight-normal h4">
+            <p class="m-0 p_size">￥4299.00</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-2">
+            <p class="m-0">服务承诺：</p>
+          </div>
+          <div class="col-10">
+            <p class="m-0">*退货补运费 *30天无忧退货 *48小时快速退款 *72小时发货</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters mt-2 ">
+      <div class="col-2">客服：</div>
+      <div class="col-10">联系客服<img src="kefuf.gif" alt=""></div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-2">规格：</div>
+      <div class="col-10"><a class="border border-dark" href="#">13.3英寸I3-7100U/4G/128G固态</a><a
+          class="ml-2 border border-dark" href="#">13.3英寸I5/4G/128G固态</a></div>
+    </div>
+    <div class="row no-gutters">
+      <div class="offset-2 col-10">
+        <a class="border border-dark" href="#">定制款：双核i7/8G内存/128G闪存</a>
+        <a class="border border-dark" href="#">定制款：双核i7/8G内存/256G闪存</a>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div>数量：</div>
+      <span id="jian" class="border border-dark">－</span>
+      <input class="form-control" type="text" id="num" value="20">
+      <span id="jia" class="border border-dark">＋</span>
+    </div>
+  </div>
+</body>
+
+</html>

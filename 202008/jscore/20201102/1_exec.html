@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var str="老师: 请用小红 我的 朋友造句。小亮: 小红是我的朋友。小然:朋友！小红是我的！";
+    //找出字符串中所有以小字开头的人名及其位置
+    //match+g
+    // var arr=str.match(/小[\u4e00-\u9fa5]/g);
+    //match不+g
+    // var arr=str.match(/小[\u4e00-\u9fa5]/);
+    // console.log(arr);
+    // arr=str.match(/小[\u4e00-\u9fa5]/);
+    // console.log(arr)
+    //exec
+    var reg=/小[\u4e00-\u9fa5]/g;//要找所有
+    //用循环，反复请exec()查找每个敏感词的内容和位置
+    //先判断条件再执行 | 先执行再判断条件 
+    //while   for       do while
+    //在不知道有没有敏感词的情况下，至少要先找一次，才知道有没有必要继续找下一次，所以，用do while
+    do{
+      var arr=reg.exec(str);
+      //因为也返回敏感词内容和位置，所以，也返回的是数组。
+      //exec()单次查找返回的数组和match不加g时，返回的数组是完全一样的！
+      console.log(arr);
+    }while(arr!=null);//如果本次找到了敏感词(结果不是null时)，才有必要继续找下一个
+
+  </script>
+</body>
+</html>

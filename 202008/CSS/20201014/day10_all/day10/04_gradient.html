@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 200px;height: 200px;
+				/* 色标 一种颜色以及这种颜色出现的位置 */
+				background-image: linear-gradient(45deg,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000);
+			}
+			#d2{
+				width: 200px;height: 200px;
+				background-image: radial-gradient(100px at 100px 100px,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000,
+				#ff0,
+				#000);
+			}
+			#d3{
+				width: 200px;height: 200px;
+				background-image: repeating-linear-gradient(90deg,
+				#000 0%,
+				#ff0 1%);
+			}
+			#d4{
+				width: 200px;height: 200px;
+				background-image: repeating-radial-gradient(100px at center center,
+					#000 0%,
+					#00f 1%,
+					#f00 2%,
+					#0f0 3%,
+					#ff0 4%,
+					#0ff 5%
+				);
+			}
+			#d5{
+				width: 200px;height: 200px;
+				background-image: -webkit-linear-gradient(left,#000,#fff);
+				background-image: -o-linear-gradient(left,#000,#fff);
+				background-image: -moz-linear-gradient(left,#000,#fff);
+				background-image: -ms-linear-gradient(left,#000,#fff);
+			}
+		</style>
+	</head>
+	<body>
+		<h5>线性渐变的兼容</h5>
+		<div id="d5"></div>
+		<br>
+		<br>
+		<br>
+		<h4>重复的径向渐变</h4>
+		<div id="d4"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>重复的线性渐变</h4>
+		<div id="d3"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>径向渐变</h4>
+		<div id="d2"></div>
+		<br>
+		<hr>
+		<br>
+		<h4>线性渐变</h4>
+		<div id="d1"></div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1、定义外层函数包裹内层函数和变量
+    function manage() {
+      //变量
+      var total = 1000;
+      //2、外层函数将内层函数返回外部
+      return function (money) {
+        total -= money;
+        console.log(`花费:${money},剩余:${total}`)
+      }
+    }
+    // 3、调用外层函数，并用变量接收返回的内层函数对象
+    var pay = manage();
+    pay(100);
+    pay(200);
+    var _pay = manage();
+    _pay(200);
+    _pay(100);
+  </script>
+</body>
+
+</html>

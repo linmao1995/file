@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//0.使用dom收据数据
+				var _uname=uname.value;
+				var _upwd=upwd.value;
+				//1.创建异步对象xhr
+				var xhr=new XMLHttpRequest();
+				console.log(xhr);
+				//4.接收响应,打开监听
+				xhr.onreadystatechange=function(){
+					//xhr.readyState的值，每改变一次，调用一次
+					//xhr.readyState=4 是我们要获取响应的这一次
+					console.log(11111);
+					if(xhr.readyState==4 && xhr.status==200){
+						//xhr.responseText自动保存响应数据
+						var r =xhr.responseText;
+						d1.innerHTML=r;
+					}
+				}
+				//2.创建请求,打开连接
+				xhr.open("get",`http://127.0.0.1:8080/ajax/test?uname=${_uname}&upwd=${_upwd}`,true);
+				//3.发送请求
+				xhr.send();
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="show()">提交</button>
+		<div id="d1"></div>
+	</body>
+</html>

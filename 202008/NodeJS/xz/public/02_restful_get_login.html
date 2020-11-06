@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restful用户登录</title>
+</head>
+
+<body>
+    用户名: <input type="text" id="uname"><span style="color: red;" id="unames"></span><br>
+    密码: <input type="text" id="upwd"><span style="color: red;" id="upwds"></span><br>
+    <button onclick="login()">GET登录</button>
+    <button onclick="login2()">POST登录</button>
+    <div id="result"></div>
+    <script>
+        function login() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            if (!_uname) {
+                unames.innerHTML = "用户名不能为空";
+                return;
+            }
+            if (!_upwd) {
+                upwds.innerHTML = "密码不能为空";
+                return;
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var _res = xhr.responseText;
+                    result.innerHTML = _res == 1 ? "登录成功" : "用户名或密码错误";
+                }
+            }
+            xhr.open("get", "/ajax/02_restful_login/" + _uname + "&" + _upwd);
+            xhr.send();
+        }
+
+        function login2() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            if (!_uname) {
+                unames.innerHTML = "用户名不能为空";
+                return;
+            }
+            if (!_upwd) {
+                upwds.innerHTML = "密码不能为空";
+                return;
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var _res = xhr.responseText;
+                    result.innerHTML = _res == 1 ? "登录成功" : "用户名或密码错误";
+                }
+            }
+            xhr.open("post", "/ajax/02_restful_post", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            var formdata = "uname=" + _uname + "&upwd=" + _upwd;
+            xhr.send(formdata);
+        }
+    </script>
+</body>
+
+</html>

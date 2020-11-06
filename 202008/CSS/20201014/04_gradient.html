@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #d1 {
+      width: 200px;
+      height: 200px;
+      /* 参数1：to left to right */
+      background-image: linear-gradient(45deg, #ff0000 0%, #00ff00 10%, #ff0000 20%, #00ff00 30%, #00ff00 100%);
+    }
+
+    #d2 {
+      width: 200px;
+      height: 200px;
+      background-image: radial-gradient(100px at 50% 50%,
+          #ffffff 0%,
+          #000000 10%,
+          #ffffff 20%,
+          #000000 30%,
+          #ffffff 40%,
+          #000000 50%,
+          #ffffff 60%,
+          #000000 70%,
+          #ffffff 80%,
+          #000000 90%,
+          #ffffff 100%
+        );
+    }
+    #d3{
+      width: 200px;
+      height: 200px;
+      background-image: repeating-linear-gradient(90deg,
+      #000 0%,
+      #fff 1%
+      );
+    }
+    #d4{
+      width: 200px;
+      height: 200px;
+      background-image: repeating-radial-gradient(100px at center center,#000 0%,#fff 1%);
+    }
+    #d5{
+      width: 200px;
+      height: 200px;
+      background-image: -webkit-linear-gradient(right,#fff,#000);
+      background-image: -moz-linear-gradient(right,#fff,#000);
+      background-image: -o-linear-gradient(right,#fff,#000);
+      background-image: -ms-linear-gradient(right,#fff,#000);
+    }
+  </style>
+</head>
+
+<body>
+  <h3>线性渐变的兼容</h3>
+  <div id="d5"></div>
+  <br><br><br>
+  <h3>重复的线性渐变</h3>
+  <div id="d4"></div>
+  <br><br><br><br>
+  <h3>重复的径向渐变</h3>
+  <div id="d3"></div>
+  <br><br><br><br>
+  <h3>径向渐变，以圆的方式渐变</h3>
+  <div id="d2"></div>
+  <br><br><br>
+  <h3>线性渐变</h3>
+  <div id="d1"></div>
+</body>
+
+</html>

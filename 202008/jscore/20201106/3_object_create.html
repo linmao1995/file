@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+    var father = {
+      money: 100000,
+      phone: "洛基亚"
+    }
+    //使用Object.create(父对象)
+
+    // 两件事
+    // 1、创建一个空子对象
+    // 2、新的子对象会继承父对象
+
+    // 使用Object.create(父对象,{})创建子对象
+    var hmm = Object.create(father, {
+      name: {
+        value: "韩梅梅",
+        writable: false,
+        enumerable: true,
+        configurable: false,
+      },
+      age: {
+        value: 20,
+        writable: true,
+        enumerable: true,
+        configurable: false
+      }
+    })
+    console.log(hmm)
+  </script>
+</body>
+
+</html>

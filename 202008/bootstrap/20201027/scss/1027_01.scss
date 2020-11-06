@@ -1,0 +1,49 @@
+$score:91;
+
+div3 {
+  @if ($score>90) {
+    content: "兰博基尼";
+  }
+
+  @else if($score>80) {
+    content: "断绝";
+  }
+
+  @else {
+    content: "决裂";
+  }
+}
+
+
+@function add($a, $b) {
+  @return $a+$b;
+}
+
+div1 {
+  width: add(20, 30) + px;
+  height: add(30, 40)+px;
+}
+
+$w:100px;
+$h:300px;
+
+p {
+  font-size: $h - $w;
+  color: red;
+  background-color: red;
+  border-radius: 50%;
+  font-weight: normal;
+}
+
+@mixin div_1($d, $c1, $p1, $c2, $p2) {
+  background: -webkit-linear-gradient($d, $c1 $p1, $c2 $p2);
+  background: -moz-linear-gradient($d, $c1 $p1, $c2 $p2);
+  background: -o-linear-gradient($d, $c1 $p1, $c2 $p2);
+  background: -ms-linear-gradient($d, $c1 $p1, $c2 $p2);
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  @include div_1(left, #000, 0%, #999, 100%)
+}

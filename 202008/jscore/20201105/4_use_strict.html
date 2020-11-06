@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // "use strict";//ES5 严格模式
+
+    // 1、禁止给未声明的变量赋值
+    function send() {
+      var gf;
+      gf = "今晚308";
+      console.log(qgf) //报错。
+    }
+    // send()
+
+    // 2、静默失败，升级为错误
+    var stu = {
+      id: 1001,
+      name: "张三",
+    }
+    Object.defineProperty(stu, "id", {
+      writable: false,
+      configurable: false,
+    })
+    // stu.id = 1002; //报错。
+
+    console.log(stu)
+
+    // 3、
+    function Student(sname, sage) {
+      this.sname = sname,
+        this.sage = sage
+    }
+    var ll = new Student("李雷", 20);
+    // console.log(ll);
+
+    //调用函数，没有 this.,new  默认为 window. 调用。
+    // 此时构造函数中 this==>window,创建在window下全局变量。
+    // 严格模式下，
+
+    // var hmm = Student("韩梅梅",18);
+    // console.log(hmm)
+    // console.log(sname,sage)
+
+    // 4、禁用 arguments.callee() 递归。
+    function fib(n) {
+      if (n < 3) {
+        return 1;
+      } else {
+        for (var i = 3; i <= n; i++) {
+          return arguments.callee(n - 1) + arguments.callee(n - 2);
+        }
+      }
+    }
+    console.log(fib(10));
+  </script>
+</body>
+
+</html>

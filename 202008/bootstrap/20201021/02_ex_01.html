@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    div {
+      border: 1px solid black;
+    }
+
+    #content {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #content>div:nth-child(1) {
+      flex: 0 0 20%;
+    }
+
+    #content>div:nth-child(2) {
+      flex: 0 0 60%;
+    }
+
+    #content>div:nth-child(3) {
+      flex: 0 0 20%;
+    }
+
+    #content>div:nth-child(2)>div {
+      display: flex;
+      border: 0;
+    }
+
+    #content>div:nth-child(2)>div>div {
+      flex: 0 0 25%;
+      border: 0;
+    }
+
+    #content>div:nth-child(2)>div>div>img {
+      width: 100%;
+      padding: 10px;
+    }
+
+    #content>div:nth-child(1)>ul {
+      list-style: none;
+    }
+
+    #content>div:nth-child(1)>ul>li {
+      border: 2px solid #00ff00;
+    }
+
+    @media (min-width: 576px) {
+      #content {
+        flex-direction: column;
+      }
+
+      #content>div:nth-child(1)>ul>li {
+        border: 2px solid #00ff00;
+      }
+
+      #content>div:nth-child(2)>div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #content>div:nth-child(2)>div>div {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (min-width: 768px){
+      #content>div:nth-child(1){
+        flex: 0 0 25%;
+      }
+      #content>div:nth-child(2){
+        flex: 0 0 75%;
+      }
+      #content>div:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 992px){
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>
+      <ul>
+        <li><a href="#">新手帮助</a></li>
+        <li><a href="#">新手帮助</a></li>
+        <li><a href="#">新手帮助</a></li>
+        <li><a href="#">新手帮助</a></li>
+        <li><a href="#">新手帮助</a></li>
+      </ul>
+    </div>
+    <div class="second">
+      <div>
+        <div><img src="1.jpg" alt=""></div>
+        <div><img src="2.jpg" alt=""></div>
+        <div><img src="3.jpg" alt=""></div>
+        <div><img src="4.jpg" alt=""></div>
+      </div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, itaque. Lorem ipsum, dolor sit amet
+      consectetur adipisicing elit. Repellat, odio, ea facilis quod nostrum facere non, cumque praesentium totam
+      provident aliquam ullam. Ut, corrupti commodi neque autem sunt ea iure?
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit est in fugiat beatae sequi consequatur, porro
+      magni cum praesentium labore voluptate nihil quisquam! Harum voluptatibus excepturi aperiam nam qui atque, ratione
+      ipsum incidunt, omnis vel neque suscipit reiciendis debitis est repudiandae, laudantium eius! Nisi, architecto
+      accusamus doloremque minima temporibus tenetur.
+    </div>
+  </div>
+</body>
+
+</html>

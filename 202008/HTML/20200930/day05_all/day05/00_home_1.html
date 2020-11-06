@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//ES6规定，可以直接使用元素的id充当元素对象
+				var _uname=uname.value;
+				console.log(uname);
+				msg.innerHTML=uname.value;
+				// var n1=document.getElementById("uname");
+				// var d1=document.getElementById("msg");
+				// d1.innerHTML=n1.value;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<button onclick="show()">显示</button>
+		<div id="msg"></div>
+	</body>
+</html>

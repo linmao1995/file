@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="uname"><br>
+    <input type="password" id="upwd"><br><br>
+    <button onclick="show()">提交</button>
+    <div id="did"></div>
+    <script>
+        function show() {
+            var _uname = uname.value;
+            var _upwd = upwd.value;
+            //1、创建异步对象
+            var xhr = new XMLHttpRequest();
+            // console.log(xhr)
+            //4、异步对象接收响应，打开监听
+            // xhr.readyState xhr的请求状态码 每改变一次调用一次function
+            xhr.onreadystatechange = function () {
+                // console.log(xhr.readyState)
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    did.innerHTML = res;
+                }
+            }
+            //2、异步对象创建请求,打开连接
+            //true异步 false同步
+            xhr.open("get", "http://127.0.0.1:8081/ajax/test?uname=" + _uname + "&upwd=" + _upwd, true);
+            //3、异步对象发送请求
+            xhr.send();
+
+        }
+    </script>
+</body>
+
+</html>

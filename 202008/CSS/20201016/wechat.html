@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pp1 div {
+      background-color: #fff;
+      width: 100px;
+      height: 100px;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin: 10px 0 10px 10px;
+      position: relative;
+
+    }
+
+    .pp1 span::after {
+      content: '';
+      border: 8px solid #ffffff00;
+      border-right: 8px solid #fff;
+      position: absolute;
+      top: 6px;
+      left: -16px;
+    }
+  </style>
+</head>
+
+<body style="background: #eee;">
+  <div class="pp1">
+    <div></div>
+    <span>文本文本文本</span>
+  </div>
+</body>
+
+</html>

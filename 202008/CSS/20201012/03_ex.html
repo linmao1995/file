@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1 {
+            color: purple;
+            background-color: yellow;
+        }
+
+        h2#t1 {
+            color: red;
+            background-color: black;
+        }
+
+        /* 爱恨原则 love&hate */
+        a:link {
+            color: pink;
+        }
+
+        a:visited {
+            color: orange;
+        }
+
+        a:hover {
+            color: red;
+            font-size: 30px;
+        }
+
+        a:active {
+            color: green;
+        }
+
+        #d1>.d2 .d3 {
+            /* 100 + 10 +1 权值*/
+            color: red;
+        }
+
+        .d1 .d2 #d3 {
+            /* 10 + 10 + 100 */
+            color: purple;
+        }
+
+        .d1 .d2 .d3 {
+            color: salmon;
+        }
+
+        .d1,
+        .d2.d3 {
+            /*群组选择器*/
+            color: springgreen;
+        }
+
+        div{
+            font-size: 10px;
+        }
+        div>span#dd1 {
+            font-size: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="t1">H2H2H2H2H2H2H2H2H2</h2>
+    <div id="codeinfo"></div>
+    <!-- <a href="javascript:window.onload()">刷新</a> -->
+    <a href="http://www.baidu.com">百度</a>
+    <a href="http://www.abc.bdc.com">1111</a>
+    <a href="http://www.alibaba.com">22222</a>
+    <br><br><br>
+    <div id="d1" class="d1">
+        <p id="d2" class="d2">
+            <span id="d3" class="d3">Lorem ipsum dolor sit amet.</span>
+        </p>
+    </div>
+    <br><br><br>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div class="dd11">ddddd</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div><span id="dd1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laudantium deserunt cumque
+            reiciendis mollitia aliquam, magnam ducimus quidem iusto odit tempora eos soluta, recusandae et a alias
+            animi pariatur nulla!</span></div>
+    <script>
+        window.onload = function getcode() {//[0,36)
+            var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            var code = '';
+            for (var i = 0; i <= 3; i++) {
+                var r = parseInt(Math.random() * arr.length);
+                code += arr[r];
+            }
+            codeinfo.innerHTML = code
+            console.log(code)
+        }
+    </script>
+</body>
+
+</html>

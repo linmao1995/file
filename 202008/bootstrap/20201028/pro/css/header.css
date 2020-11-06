@@ -1,0 +1,17 @@
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "|";
+}
+
+.my_border_color {
+  border-color: #0aa1ed;
+}
+
+.form-control:focus {
+  border: 1px solid #0aa1ed;
+  box-shadow: 0 0 0 0 #000;
+}
+
+a:hover{
+  text-decoration: none;
+  /* color: #0aa1ed; */
+}

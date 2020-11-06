@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //在数组的原型对象中添加一个sum()函数
+    Array.prototype.sum=function(){
+      console.log(`调用了一次我自己的sum()`)
+      //先定义一个变量,准备累加每个元素值
+      var result=0;
+      //遍历当前数组中每个元素值
+      //因为将来sum()使用"数组.sum()"方式调用的
+      //所以this可以自动获得将来.前的任意数组！
+      for(var i=0;i<this.length;i++){
+        result+=this[i]
+      }
+      //返回结果
+      return result;
+    }
+
+
+
+    var arr1=[1,2,3];
+    var arr2=[1,2,3,4,5];
+    console.log(arr1.sum());//6
+    console.log(arr2.sum());//15
+  </script>
+</body>
+</html>

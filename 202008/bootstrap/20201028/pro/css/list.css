@@ -1,0 +1,71 @@
+.bg_gray {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.mybtn_1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0;
+  outline: 0;
+  font-size: 24px;
+  padding: 0;
+  line-height: 1;
+  color: #fff;
+}
+.my_input_1{
+  width: 15%;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.myimg_1{
+  transition: transform 0.5s;
+}
+.myimg_1:hover{
+  transform: scale(1.1);
+}
+
+.c_shadow{
+  transition: 0.2s;
+}
+.c_shadow:hover{
+  box-shadow: 0px 0px 3px 2px #cccccc;
+}
+
+.page-link{
+  border-radius: 0.2rem;
+  background-color: transparent;
+  border: 1px solid #dddddd;
+}
+
+.page-link:hover{
+  border-color: #0aa1ed;
+  background-color: transparent;
+}
+
+.page-item+.page-item{
+  margin-left: 0.5rem;
+}
+
+.my_top_border{
+  border: 1px dashed #b8b8b8;
+}
+.mybtn_2{
+  width: 1rem;
+  height: 1rem;
+  outline: 0;
+  border: 0;
+  font-size: 0.8rem;
+  padding: 0;
+  line-height: 1rem;
+  color: #fff;
+}
+.my_bg_gray{
+  background-color: #808080;
+}

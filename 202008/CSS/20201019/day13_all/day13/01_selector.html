@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 相邻兄弟选择器 */
+			/* p+.c1{color:red} */
+			/* 通用选择器 */
+			/* p~p{color:Red} */
+			/* 属性选择器及其变种 */
+			/* [aaa]{color:red;} */
+			/* [aaa][title][style]{color:red;} */
+			/* span[title][aaa][style]{color:Red} */
+			/* span[aaa="bbb"][title="bi lao shi ren fa biao"]{color: red;} */
+				/* [title^="bi l"]{color:red;} */
+				/* [title$="biao"]{color:red;} */
+				/* [title*="lao"]{color:red;} */
+				/* [title~="lao"]{color:red;} */
+				/* 结构选择器 */
+				span:first-child{color:red;}
+				h1:last-child{background-color: #00FFFF;}
+				span:nth-child(1){
+					background: #FFFF00;
+				}
+		</style>
+	</head>
+	<body>
+		<span>1111</span>
+		<p id="p1">大娃</p>
+		<p class="c1">二娃</p>
+		<span style="" title="bi lao shi ren fa biao"  aaa="bbb">三娃</span>
+		<b>四娃</b>
+		<p>五娃</p>
+		<div class="c1">六娃</div>
+		<h1 title="bi laoshirenfabiao">七娃</h1>
+	</body>
+</html>

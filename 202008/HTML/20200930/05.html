@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getinfo()">获取测试接口</button>
+    <script>
+        function getinfo(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('get','/ajax/test?uname=zhangsan&upwd=123',true);
+            xhr.send();
+            xhr.onreadystatechange = function(e){
+                if(xhr.readyState==4 && xhr.status==200){
+                    console.log(xhr.responseText);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

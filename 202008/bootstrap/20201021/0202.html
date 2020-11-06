@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid black;
+    }
+
+    ul>li {
+      list-style: none;
+      border: 1px solid #00ff00;
+    }
+
+    #content>div:nth-child(1) {
+      flex: 0 0 20%;
+      border: 1px solid black;
+    }
+
+    #content>div:nth-child(2) {
+      flex: 0 0 60%;
+      border: 1px solid black;
+    }
+
+    #content>div:nth-child(2)>div {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    #content>div:nth-child(2)>div>div {
+      flex: 0 0 25%;
+
+    }
+
+    #content>div:nth-child(2)>div>div>img {
+      padding: 5px;
+      width: 100%;
+    }
+
+    #content>div:nth-child(3) {
+      flex: 0 0 20%;
+      border: 1px solid black;
+    }
+
+    @media (min-width: 576px) {
+      #content>div:nth-child(1) {
+        flex: 0 0 100%;
+      }
+
+      #content>div:nth-child(2) {
+        flex: 0 0 100%;
+      }
+
+      #content>div:nth-child(3) {
+        flex: 0 0 100%;
+      }
+
+      #content>div:nth-child(2)>div>div {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #content>div:nth-child(1) {
+        flex: 0 0 25%;
+      }
+
+      #content>div:nth-child(2) {
+        flex: 0 0 75%;
+      }
+
+      #content>div:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #content>div:nth-child(1) {
+        flex: 0 0 20%;
+      }
+
+      #content>div:nth-child(2) {
+        flex: 0 0 60%;
+      }
+
+      #content>div:nth-child(3) {
+        flex: 0 0 20%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <div>
+      <ul>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+        <li><a href="#">豆蔻年华</a></li>
+      </ul>
+    </div>
+    <div>
+      <div>
+        <div>
+          <img src="1.jpg" alt="">
+        </div>
+        <div>
+          <img src="1.jpg" alt="">
+        </div>
+        <div>
+          <img src="1.jpg" alt="">
+        </div>
+        <div>
+          <img src="1.jpg" alt="">
+        </div>
+      </div>
+      <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quas architecto magnam aut saepe suscipit
+        consequuntur eos repellendus libero animi laborum sunt natus possimus, alias ducimus iure dolorum praesentium?
+        Officia, distinctio? Veritatis praesentium, itaque quam voluptate fuga, dolore vel tenetur, animi sint totam non
+      </div>
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ex fugit, similique asperiores mollitia voluptas
+      labore amet. Ipsa blanditiis laudantium suscipit aperiam totam, ut adipisci saepe exercitationem dolor fuga
+      dolorem. Tempore maxime ipsum, necessitatibus cupiditate facere expedita possimus ad beatae numquam et! Hic
+      excepturi nemo, minus dolorem dolores aperiam beatae numquam
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="show()">点击</button>
+    <div id="stumsg"></div>
+
+    <hr>
+    <button onclick="show2()">点击2</button>
+    <div id="stu2"></div>
+    <script>
+        function show() {
+            var stu = [
+                { uid: 1001, name: "张三", age: 20 },
+                { uid: 1002, name: "李四", age: 20 },
+                { uid: 1003, name: "王五", age: 20 }
+            ]
+            for (var i = 0; i <= stu.length - 1; i++) {
+                console.log(stu[i].uid)
+            }
+            var d = document.getElementById("stumsg");
+            d.innerHTML = `
+        <table border="1px" bordercolor="black" cellspacing="0">
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+            <tr>
+                <td>${stu[0].uid}</td>
+                <td>${stu[0].name}</td>
+                <td>${stu[0].age}</td>
+            </tr>
+            <tr>
+                <td>${stu[1].uid}</td>
+                <td>${stu[1].name}</td>
+                <td>${stu[1].age}</td>
+            </tr>
+            <tr>
+                <td>${stu[2].uid}</td>
+                <td>${stu[2].name}</td>
+                <td>${stu[2].age}</td>
+            </tr>
+        </table>
+        `
+        }
+
+        function show2() {
+            var stu = [
+                { uid: 1001, name: "张三", age: 20 },
+                { uid: 1002, name: "李四", age: 20 },
+                { uid: 1003, name: "王五", age: 20 }
+            ];
+            var res = document.getElementById("stu2");
+            var str = `
+                <table border="1px" bordercolor="black" cellspacing="0">
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                    </tr>
+            `;
+            for (let i = 0; i <= stu.length - 1; i++) {
+                str += `
+                    <tr>
+                        <td>${stu[0].uid}</td>
+                        <td>${stu[0].name}</td>
+                        <td>${stu[0].age}</td>
+                    </tr>
+                `;
+            }
+
+            str += `</table>`;
+            res.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

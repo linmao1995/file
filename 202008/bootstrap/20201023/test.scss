@@ -1,0 +1,11 @@
+.btn{
+  
+}
+$width:100px;
+$height:100px;
+$bg_color:#0f0;
+div{
+  width: $width;
+  height: $height;
+  background-color: $bg_color;
+}

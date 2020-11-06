@@ -1,0 +1,22 @@
+@charset "UTF-8";
+div3 {
+  content: "兰博基尼"; }
+
+div1 {
+  width: 50px;
+  height: 70px; }
+
+p {
+  font-size: 200px;
+  color: red;
+  background-color: red;
+  border-radius: 50%;
+  font-weight: normal; }
+
+div {
+  width: 100px;
+  height: 100px;
+  background: -webkit-linear-gradient(left, #000 0%, #999 100%);
+  background: -moz-linear-gradient(left, #000 0%, #999 100%);
+  background: -o-linear-gradient(left, #000 0%, #999 100%);
+  background: -ms-linear-gradient(left, #000 0%, #999 100%); }

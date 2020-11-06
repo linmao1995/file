@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. 定义构造函数描述所有学生类型的对象的统一结构
+    //要求: 所有学生都要有姓名和年龄属性
+    //      所有学生都要会做自我介绍
+    function Student(sname,sage){
+      this.sname=sname;
+      this.sage=sage;
+      //今后构造函数中就不应该包含方法定义！
+    }
+    //尝试输出构造函数Student赠送的原型对象
+    console.log(Student.prototype);
+    //所有方法定义一律放入原型对象中
+    Student.prototype.intr=function(){
+      console.log(`I'm ${this.sname},I'm ${this.sage}`)
+    }
+    //2. 反复创建2个学生对象
+    var lilei=new Student("Li Lei", 11);
+    var hmm=new Student("Han Meimei", 12);
+    lilei.intr();
+    hmm.intr();
+    console.log(lilei);
+    console.log(hmm);
+
+    //亲子鉴定: 
+    //lilei的爹是不是Student的老公！
+    console.log(lilei.__proto__==Student.prototype);//true
+    //hmm的爹是不是Student的老公!
+    console.log(hmm.__proto__==Student.prototype);//true
+  </script>
+</body>
+</html>

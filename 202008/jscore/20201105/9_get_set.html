@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // "use strict";
+    // 自定义规则保护属性
+    var emp = {
+      id: 1001,
+      name: "韩梅梅",
+      age: 20,//半隐藏
+      gender: 0
+    }
+
+    Object.defineProperties(emp, {
+      _age: {//定义隐藏的数据属性，用于时机存储属性值。
+        value: emp.age,
+        writable: true,
+        enumerable: false,
+        configurable: false
+      },
+      age: {//定义 访问器属性，保存隐藏的数据属性。
+        get: function () {//获取属性时，自动调用。
+          console.log("调用get()方法", this)
+          return this._age;//返回受保护的属性值。
+        },
+        set: function (newAge) {//试图修改属性时自动调用。
+          console.log("调用set()方法");
+          if (newAge >= 18 && newAge <= 60) {
+            this._age = newAge;
+          } else {
+            throw Error("年龄超出范围");
+          }
+        },
+        enumerable: true,//设置其可遍历
+        configurable: false
+      }
+    })
+    emp.age = 20;
+    console.log(emp);
+  </script>
+</body>
+
+</html>

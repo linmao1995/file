@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#parent{
+				height: 800px;
+				border: 2px solid #000;
+				font:36px jokerman;
+				display: flex;
+				/* 设置主轴方向 */
+				flex-direction: row;
+				/* 主轴方向项目的换行 */
+				flex-wrap: wrap;
+				/* 设置项目在主轴上的对齐方式 */
+				justify-content: flex-start;
+				/* 设置项目在交叉轴上的对齐方式 */
+				align-items: flex-start;
+			}
+			#parent>div{width: 200px;height: 200px;}
+			#parent>div:first-child{
+				background: #ff0;
+				align-self: center;
+			}
+			#parent>div:nth-child(2){
+				background: #0ff;
+				align-self: flex-end;
+			}
+			#parent>div:nth-child(3){
+				background: #faf;
+				align-self: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</div>
+	</body>
+</html>
